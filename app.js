@@ -23,18 +23,12 @@ const translations = {
     backText: "Back",
     submitBtnText: "Submit",
     hintBtnText: "Get Hint",
-    
-    // Linear Graph
     linearTitle: "Linear Graphs",
     linearProblem: "For the equation: <br><strong>y = 2x + 3</strong><br><br>What is the value of y when x = 2?",
     linearHint: "Substitute x = 2 into the equation. y = 2(2) + 3 = 4 + 3 = ?",
-    
-    // Quadratic Graph
     quadTitle: "Quadratic Graphs",
     quadProblem: "For the equation: <br><strong>y = x² - 4x + 3</strong><br><br>Find the minimum value of the graph.",
     quadHint: "Use the formula: x = -b / 2a. Here a = 1, b = -4. Then substitute back into the equation.",
-    
-    // Mini Games
     hintTitle: "Hint",
     shapeGameTitle: "Shape Identifier",
     shapeGameDesc: "Identify the shape of the graph based on its characteristics.",
@@ -45,26 +39,18 @@ const translations = {
     matchInstruction: "Check if your drawn graph matches the reference.",
     yourGraphLabel: "Your Drawing",
     correctLabel: "Expected Graph",
-    
-    // AI Tutor
     aiTutorPageTitle: "AI Tutor",
     aiTutorDesc: "Ask any question about graphs and get personalized help!",
     studentQuestion: "Ask your question here...",
     sendText: "Send",
     suggestedTopicsLabel: "📌 Suggested Topics:",
-    
-    // Level 2
     level2Desc: "You've unlocked Level 2! Explore more advanced topics and challenges.",
     totalTopicsLabel: "Topics",
     totalGamesLabel: "Games",
     level2Features: "✨ Advanced quadratic forms<br>✨ Cubic and polynomial graphs<br>✨ Interactive graph builders<br>✨ Challenge modes<br>✨ Certificate on completion",
     backToMenuText: "Back to Menu",
-    
-    // Success
     congratsText: "Congratulations!",
     successMsg: "You've completed SmartMath challenges!",
-    
-    // Game Options
     shapeOptions: ["Linear (Straight Line)", "Parabola (U-shape)", "Cubic (S-shape)"],
     nextBtnText: "Next Question",
   },
@@ -92,18 +78,12 @@ const translations = {
     backText: "Kembali",
     submitBtnText: "Hantar",
     hintBtnText: "Petua",
-    
-    // Linear Graph
     linearTitle: "Graf Linear",
     linearProblem: "Bagi persamaan: <br><strong>y = 2x + 3</strong><br><br>Apakah nilai y apabila x = 2?",
     linearHint: "Gantikan x = 2 ke dalam persamaan. y = 2(2) + 3 = 4 + 3 = ?",
-    
-    // Quadratic Graph
     quadTitle: "Graf Kuadratik",
     quadProblem: "Bagi persamaan: <br><strong>y = x² - 4x + 3</strong><br><br>Cari nilai minimum graf.",
     quadHint: "Gunakan formula: x = -b / 2a. Di sini a = 1, b = -4. Kemudian gantikan semula ke dalam persamaan.",
-    
-    // Mini Games
     hintTitle: "Petua",
     shapeGameTitle: "Pengenalan Bentuk",
     shapeGameDesc: "Kenal pasti bentuk graf berdasarkan ciri-cirinya.",
@@ -114,26 +94,18 @@ const translations = {
     matchInstruction: "Semak sama ada graf anda dilukis sepadan dengan rujukan.",
     yourGraphLabel: "Lukisan Anda",
     correctLabel: "Graf Dijangka",
-    
-    // AI Tutor
     aiTutorPageTitle: "Tutor AI",
     aiTutorDesc: "Tanya apa-apa soalan tentang graf dan dapatkan bantuan yang diperibadikan!",
     studentQuestion: "Tanya soalan anda di sini...",
     sendText: "Hantar",
     suggestedTopicsLabel: "📌 Topik Cadangan:",
-    
-    // Level 2
     level2Desc: "Anda telah membuka Tahap 2! Terokai lebih banyak topik dan cabaran lanjutan.",
     totalTopicsLabel: "Topik",
     totalGamesLabel: "Permainan",
     level2Features: "✨ Bentuk kuadratik lanjutan<br>✨ Graf kubik dan polinomial<br>✨ Pembina graf interaktif<br>✨ Mode cabaran<br>✨ Sijil setelah siap",
     backToMenuText: "Kembali ke Menu",
-    
-    // Success
     congratsText: "Tahniah!",
     successMsg: "Anda telah menyelesaikan cabaran SmartMath!",
-    
-    // Game Options
     shapeOptions: ["Linear (Garis Lurus)", "Parabola (Bentuk U)", "Kubik (Bentuk S)"],
     nextBtnText: "Soalan Seterusnya",
   }
@@ -152,7 +124,17 @@ let gameStats = {
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
-  loadProgress();
+  const savedLang = localStorage.getItem('language');
+  if (savedLang) {
+    currentLanguage = savedLang;
+    updateUIText();
+    loadProgress();
+    if (studentName) {
+      goToPage('menu');
+    } else {
+      goToPage('login');
+    }
+  }
 });
 
 // Language System
@@ -169,75 +151,73 @@ function setLanguage(lang) {
 }
 
 function updateUIText() {
+  if (!currentLanguage) return;
+  
   const t = translations[currentLanguage];
   
-  // Update all text elements
-  document.getElementById('loginSubtitle').textContent = t.loginSubtitle;
+  // Update all text elements safely
+  const safeUpdate = (id, value, isHTML = false) => {
+    const el = document.getElementById(id);
+    if (el) {
+      if (isHTML) el.innerHTML = value;
+      else el.textContent = value;
+    }
+  };
+  
+  safeUpdate('loginSubtitle', t.loginSubtitle);
+  safeUpdate('studentName', '', false);
   document.getElementById('studentName').placeholder = t.studentNamePlaceholder;
-  document.getElementById('loginBtnText').textContent = t.loginBtnText;
-  document.getElementById('changeLangText').textContent = t.changeLangText;
-  document.getElementById('welcomeText').textContent = t.welcomeText;
-  document.getElementById('logoutBtnText').textContent = t.logoutBtnText;
-  document.getElementById('menuTitle').textContent = t.menuTitle;
-  document.getElementById('totalPointsLabel').textContent = t.totalPointsLabel;
-  document.getElementById('levelLabel').textContent = t.levelLabel;
-  document.getElementById('topicsTitle').textContent = t.topicsTitle;
-  document.getElementById('linearTopicText').textContent = t.linearTopicText;
-  document.getElementById('quadTopicText').textContent = t.quadTopicText;
-  document.getElementById('miniGamesTitle').textContent = t.miniGamesTitle;
-  document.getElementById('shapeGameText').textContent = t.shapeGameText;
-  document.getElementById('matchGameText').textContent = t.matchGameText;
-  document.getElementById('aiTutorTitle').textContent = t.aiTutorTitle;
-  document.getElementById('aiTutorText').textContent = t.aiTutorText;
-  
-  // Linear
-  document.getElementById('linearTitle').textContent = t.linearTitle;
-  document.getElementById('linearProblem').innerHTML = t.linearProblem;
-  document.getElementById('linearHint').textContent = t.linearHint;
-  
-  // Quadratic
-  document.getElementById('quadTitle').textContent = t.quadTitle;
-  document.getElementById('quadProblem').innerHTML = t.quadProblem;
-  document.getElementById('quadHint').textContent = t.quadHint;
-  
-  // Mini Games
-  document.getElementById('hintTitle').textContent = t.hintTitle;
-  document.getElementById('shapeGameTitle').textContent = t.shapeGameTitle;
-  document.getElementById('shapeGameDesc').textContent = t.shapeGameDesc;
-  document.getElementById('shapeInstruction').textContent = t.shapeInstruction;
-  document.getElementById('matchGameTitle').textContent = t.matchGameTitle;
-  document.getElementById('matchGameDesc').textContent = t.matchGameDesc;
-  document.getElementById('matchEquation').textContent = t.matchEquation;
-  document.getElementById('matchInstruction').textContent = t.matchInstruction;
-  document.getElementById('yourGraphLabel').textContent = t.yourGraphLabel;
-  document.getElementById('correctLabel').textContent = t.correctLabel;
-  
-  // AI Tutor
-  document.getElementById('aiTutorPageTitle').textContent = t.aiTutorPageTitle;
-  document.getElementById('aiTutorDesc').textContent = t.aiTutorDesc;
+  safeUpdate('loginBtnText', t.loginBtnText);
+  safeUpdate('changeLangText', t.changeLangText);
+  safeUpdate('welcomeText', t.welcomeText);
+  safeUpdate('logoutBtnText', t.logoutBtnText);
+  safeUpdate('menuTitle', t.menuTitle);
+  safeUpdate('totalPointsLabel', t.totalPointsLabel);
+  safeUpdate('levelLabel', t.levelLabel);
+  safeUpdate('topicsTitle', t.topicsTitle);
+  safeUpdate('linearTopicText', t.linearTopicText);
+  safeUpdate('quadTopicText', t.quadTopicText);
+  safeUpdate('miniGamesTitle', t.miniGamesTitle);
+  safeUpdate('shapeGameText', t.shapeGameText);
+  safeUpdate('matchGameText', t.matchGameText);
+  safeUpdate('aiTutorTitle', t.aiTutorTitle);
+  safeUpdate('aiTutorText', t.aiTutorText);
+  safeUpdate('linearTitle', t.linearTitle);
+  safeUpdate('linearProblem', t.linearProblem, true);
+  safeUpdate('linearHint', t.linearHint);
+  safeUpdate('quadTitle', t.quadTitle);
+  safeUpdate('quadProblem', t.quadProblem, true);
+  safeUpdate('quadHint', t.quadHint);
+  safeUpdate('hintTitle', t.hintTitle);
+  safeUpdate('shapeGameTitle', t.shapeGameTitle);
+  safeUpdate('shapeGameDesc', t.shapeGameDesc);
+  safeUpdate('shapeInstruction', t.shapeInstruction);
+  safeUpdate('matchGameTitle', t.matchGameTitle);
+  safeUpdate('matchGameDesc', t.matchGameDesc);
+  safeUpdate('matchEquation', t.matchEquation);
+  safeUpdate('matchInstruction', t.matchInstruction);
+  safeUpdate('yourGraphLabel', t.yourGraphLabel);
+  safeUpdate('correctLabel', t.correctLabel);
+  safeUpdate('aiTutorPageTitle', t.aiTutorPageTitle);
+  safeUpdate('aiTutorDesc', t.aiTutorDesc);
   document.getElementById('studentQuestion').placeholder = t.studentQuestion;
-  document.getElementById('sendText').textContent = t.sendText;
-  document.getElementById('suggestedTopicsLabel').textContent = t.suggestedTopicsLabel;
-  document.getElementById('initialMessage').textContent = t.aiTutorDesc;
+  safeUpdate('sendText', t.sendText);
+  safeUpdate('suggestedTopicsLabel', t.suggestedTopicsLabel);
+  safeUpdate('initialMessage', t.aiTutorDesc);
+  safeUpdate('level2Title', t.level2Title);
+  safeUpdate('level2Desc', t.level2Desc);
+  safeUpdate('totalTopicsLabel', t.totalTopicsLabel);
+  safeUpdate('totalGamesLabel', t.totalGamesLabel);
+  safeUpdate('level2Features', t.level2Features, true);
+  safeUpdate('congratsText', t.congratsText);
+  safeUpdate('successMsg', t.successMsg);
   
-  // Level 2
-  document.getElementById('level2Title').textContent = t.level2Title;
-  document.getElementById('level2Desc').textContent = t.level2Desc;
-  document.getElementById('totalTopicsLabel').textContent = t.totalTopicsLabel;
-  document.getElementById('totalGamesLabel').textContent = t.totalGamesLabel;
-  document.getElementById('level2Features').innerHTML = t.level2Features;
-  
-  // Success
-  document.getElementById('congratsText').textContent = t.congratsText;
-  document.getElementById('successMsg').textContent = t.successMsg;
-  
-  // Buttons with text
+  // Update all button texts
   document.querySelectorAll('#submitBtnText').forEach(el => el.textContent = t.submitBtnText);
   document.querySelectorAll('#hintBtnText').forEach(el => el.textContent = t.hintBtnText);
   document.querySelectorAll('#backText').forEach(el => el.textContent = t.backText);
   document.querySelectorAll('#nextBtnText').forEach(el => el.textContent = t.nextBtnText);
   document.querySelectorAll('#backToMenuText').forEach(el => el.textContent = t.backToMenuText);
-  document.querySelectorAll('#sendText').forEach(el => el.textContent = t.sendText);
   
   // Update shape options
   const shapeOptions = document.getElementById('shapeOptions');
@@ -271,7 +251,11 @@ function logout() {
   
   if (confirm(confirmText)) {
     studentName = null;
+    score = 0;
+    level = 1;
+    gameStats = { topicsCompleted: [], gamesPlayed: 0, achievements: [] };
     document.getElementById('studentName').value = '';
+    localStorage.removeItem('smartmath_progress');
     goToPage('login');
   }
 }
@@ -279,14 +263,17 @@ function logout() {
 // Page Navigation
 function goToPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  document.getElementById(page).classList.add('active');
+  const pageEl = document.getElementById(page);
+  if (pageEl) {
+    pageEl.classList.add('active');
+  }
   
   if (page === 'shapeGuess') {
-    drawRandomShape();
+    setTimeout(() => drawRandomShape(), 100);
   } else if (page === 'graphMatch') {
-    initGraphMatch();
+    setTimeout(() => initGraphMatch(), 100);
   } else if (page === 'aiTutor') {
-    initAITutor();
+    setTimeout(() => initAITutor(), 100);
   }
 }
 
@@ -307,7 +294,9 @@ function checkLinear() {
     score += 10;
     resultDiv.innerHTML = '✅ ' + (currentLanguage === 'en' ? 'Correct! +10 points' : 'Betul! +10 mata');
     resultDiv.className = 'result correct';
-    gameStats.topicsCompleted.push('linear');
+    if (!gameStats.topicsCompleted.includes('linear')) {
+      gameStats.topicsCompleted.push('linear');
+    }
   } else {
     resultDiv.innerHTML = '❌ ' + (currentLanguage === 'en' ? 'Wrong. Try again.' : 'Salah. Cuba lagi.');
     resultDiv.className = 'result wrong';
@@ -325,7 +314,9 @@ function checkQuadratic() {
     score += 10;
     resultDiv.innerHTML = '✅ ' + (currentLanguage === 'en' ? 'Correct! +10 points' : 'Betul! +10 mata');
     resultDiv.className = 'result correct';
-    gameStats.topicsCompleted.push('quadratic');
+    if (!gameStats.topicsCompleted.includes('quadratic')) {
+      gameStats.topicsCompleted.push('quadratic');
+    }
   } else {
     resultDiv.innerHTML = '❌ ' + (currentLanguage === 'en' ? 'Wrong. Try again.' : 'Salah. Cuba lagi.');
     resultDiv.className = 'result wrong';
@@ -336,31 +327,8 @@ function checkQuadratic() {
 }
 
 // Mini Games - Shape Guessing
-const shapeTypes = [
-  { name: 0, draw: drawLinearShape },
-  { name: 1, draw: drawParabolaShape },
-  { name: 2, draw: drawCubicShape }
-];
-
-let currentShapeIndex = 0;
-let selectedShapeAnswer = null;
-
-function drawRandomShape() {
-  selectedShapeAnswer = null;
-  document.querySelectorAll('.shape-option').forEach(el => el.classList.remove('selected'));
-  
-  currentShapeIndex = Math.floor(Math.random() * 3);
-  const canvas = document.getElementById('shapeCanvas');
-  const ctx = canvas.getContext('2d');
-  
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  shapeTypes[currentShapeIndex].draw(ctx, canvas.width, canvas.height);
-  
-  document.getElementById('shapeGameResult').innerHTML = '';
-  document.getElementById('nextShapeBtn').style.display = 'none';
-}
-
 function drawLinearShape(ctx, w, h) {
+  ctx.clearRect(0, 0, w, h);
   ctx.strokeStyle = '#667eea';
   ctx.lineWidth = 3;
   ctx.beginPath();
@@ -370,6 +338,7 @@ function drawLinearShape(ctx, w, h) {
 }
 
 function drawParabolaShape(ctx, w, h) {
+  ctx.clearRect(0, 0, w, h);
   ctx.strokeStyle = '#667eea';
   ctx.lineWidth = 3;
   ctx.beginPath();
@@ -383,6 +352,7 @@ function drawParabolaShape(ctx, w, h) {
 }
 
 function drawCubicShape(ctx, w, h) {
+  ctx.clearRect(0, 0, w, h);
   ctx.strokeStyle = '#667eea';
   ctx.lineWidth = 3;
   ctx.beginPath();
@@ -396,13 +366,38 @@ function drawCubicShape(ctx, w, h) {
   ctx.stroke();
 }
 
+let currentShapeIndex = 0;
+let selectedShapeAnswer = null;
+
+function drawRandomShape() {
+  selectedShapeAnswer = null;
+  document.querySelectorAll('.shape-option').forEach(el => el.classList.remove('selected'));
+  
+  currentShapeIndex = Math.floor(Math.random() * 3);
+  const canvas = document.getElementById('shapeCanvas');
+  if (!canvas) return;
+  
+  const ctx = canvas.getContext('2d');
+  
+  if (currentShapeIndex === 0) {
+    drawLinearShape(ctx, canvas.width, canvas.height);
+  } else if (currentShapeIndex === 1) {
+    drawParabolaShape(ctx, canvas.width, canvas.height);
+  } else {
+    drawCubicShape(ctx, canvas.width, canvas.height);
+  }
+  
+  document.getElementById('shapeGameResult').innerHTML = '';
+  document.getElementById('nextShapeBtn').style.display = 'none';
+}
+
 function selectShape(shapeIndex) {
   selectedShapeAnswer = shapeIndex;
   document.querySelectorAll('.shape-option').forEach(el => el.classList.remove('selected'));
-  document.getElementById('shape' + shapeIndex).classList.add('selected');
+  const btn = document.getElementById('shape' + shapeIndex);
+  if (btn) btn.classList.add('selected');
   
-  // Auto-check after selection
-  setTimeout(() => checkShape(), 500);
+  setTimeout(() => checkShape(), 300);
 }
 
 function checkShape() {
@@ -438,10 +433,13 @@ function initGraphMatch() {
   const matchCanvas = document.getElementById('matchCanvas');
   const referenceCanvas = document.getElementById('referenceCanvas');
   
+  if (!matchCanvas || !referenceCanvas) return;
+  
   const ctx1 = matchCanvas.getContext('2d');
   const ctx2 = referenceCanvas.getContext('2d');
   
-  // Draw a sample parabola
+  // Clear and draw reference parabola
+  ctx2.clearRect(0, 0, referenceCanvas.width, referenceCanvas.height);
   ctx2.strokeStyle = '#667eea';
   ctx2.lineWidth = 2;
   ctx2.beginPath();
@@ -457,6 +455,10 @@ function initGraphMatch() {
   ctx1.clearRect(0, 0, matchCanvas.width, matchCanvas.height);
   ctx1.fillStyle = '#f5f5f5';
   ctx1.fillRect(0, 0, matchCanvas.width, matchCanvas.height);
+  ctx1.fillStyle = '#999';
+  ctx1.font = '12px Arial';
+  ctx1.textAlign = 'center';
+  ctx1.fillText(currentLanguage === 'en' ? 'Draw here' : 'Lukis di sini', matchCanvas.width/2, matchCanvas.height/2);
 }
 
 function checkMatch() {
@@ -475,6 +477,8 @@ function nextMatchGame() {
 // AI Tutor System
 function initAITutor() {
   const container = document.getElementById('chatContainer');
+  if (!container) return;
+  
   container.innerHTML = '<div class="message tutor">' + 
     (currentLanguage === 'en' 
       ? 'Hi! I\'m your AI Tutor. Ask me anything about graphs - linear, quadratic, or more!' 
@@ -489,6 +493,7 @@ function sendQuestion() {
   if (!question) return;
   
   const container = document.getElementById('chatContainer');
+  if (!container) return;
   
   // Add student message
   const studentMsg = document.createElement('div');
@@ -517,7 +522,7 @@ function sendQuestion() {
   }, 1500);
   
   document.getElementById('studentQuestion').value = '';
-  score += 2; // Small reward for engagement
+  score += 2;
   updateScore();
 }
 
@@ -541,7 +546,7 @@ function generateAIResponse(question) {
     }
   };
   
-  const lang = currentLanguage;
+  const lang = currentLanguage || 'en';
   const responseSet = responses[lang];
   
   if (q.includes('linear') || q.includes('garis')) return responseSet.linear;
@@ -553,13 +558,20 @@ function generateAIResponse(question) {
 
 function updateSuggestedTopics() {
   const suggestedDiv = document.getElementById('suggestedTopics');
+  if (!suggestedDiv) return;
+  
   const topics = currentLanguage === 'en'
     ? ['How do I find the slope?', 'What is a vertex?', 'How to draw a parabola?']
     : ['Bagaimana cara mencari cerun?', 'Apakah itu puncak?', 'Bagaimana melukis parabola?'];
   
   suggestedDiv.innerHTML = topics.map(topic => 
-    `<button style="margin: 5px; padding: 8px 12px; font-size: 0.9em;" onclick="document.getElementById('studentQuestion').value='${topic}'; sendQuestion();">${topic}</button>`
+    `<button style="margin: 5px; padding: 8px 12px; font-size: 0.9em;" onclick="setQuestionAndSend('${topic}');">${topic}</button>`
   ).join('');
+}
+
+function setQuestionAndSend(question) {
+  document.getElementById('studentQuestion').value = question;
+  sendQuestion();
 }
 
 // Progress Saving System
@@ -577,39 +589,54 @@ function saveProgress() {
 function loadProgress() {
   const saved = localStorage.getItem('smartmath_progress');
   if (saved) {
-    const progress = JSON.parse(saved);
-    studentName = progress.studentName;
-    score = progress.score;
-    level = progress.level;
-    gameStats = progress.gameStats;
-    
-    if (studentName) {
-      document.getElementById('studentName').value = studentName;
-      document.getElementById('studentNameDisplay').textContent = studentName;
-      updateScore();
+    try {
+      const progress = JSON.parse(saved);
+      studentName = progress.studentName;
+      score = progress.score;
+      level = progress.level;
+      gameStats = progress.gameStats || { topicsCompleted: [], gamesPlayed: 0, achievements: [] };
+      
+      if (studentName) {
+        const nameEl = document.getElementById('studentName');
+        if (nameEl) nameEl.value = studentName;
+        const displayEl = document.getElementById('studentNameDisplay');
+        if (displayEl) displayEl.textContent = studentName;
+        updateScore();
+      }
+    } catch (e) {
+      console.error('Error loading progress:', e);
     }
   }
 }
 
 // Scoring and Unlocking System
 function updateScore() {
-  document.getElementById('scoreDisplay').textContent = 'Score: ' + score;
-  document.getElementById('totalPoints').textContent = score;
+  const scoreDisplay = document.getElementById('scoreDisplay');
+  if (scoreDisplay) scoreDisplay.textContent = 'Score: ' + score;
+  
+  const totalPoints = document.getElementById('totalPoints');
+  if (totalPoints) totalPoints.textContent = score;
   
   // Calculate level
   if (score >= 50) level = 3;
   else if (score >= 20) level = 2;
   else level = 1;
   
-  document.getElementById('currentLevel').textContent = level;
+  const levelDisplay = document.getElementById('currentLevel');
+  if (levelDisplay) levelDisplay.textContent = level;
+  
+  const level2Btn = document.getElementById('level2Btn');
+  const level2Title = document.getElementById('level2Title');
   
   if (level >= 2) {
-    document.getElementById('level2Btn').style.display = 'inline-block';
-    document.getElementById('level2Title').style.display = 'block';
+    if (level2Btn) level2Btn.style.display = 'inline-block';
+    if (level2Title) level2Title.style.display = 'block';
   }
   
   if (level >= 3) {
-    gameStats.achievements.push('Advanced Learner');
+    if (!gameStats.achievements.includes('Advanced Learner')) {
+      gameStats.achievements.push('Advanced Learner');
+    }
   }
   
   saveProgress();
