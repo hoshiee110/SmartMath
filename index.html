@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SmartMath - Interactive Graph Learning</title>
+<title>MyOT_G SmartMath - AI-Powered Interactive Mathematics Learning</title>
 
 <style>
 
@@ -38,7 +38,7 @@ body {
   background: white;
   padding: 40px;
   border-radius: 16px;
-  max-width: 600px;
+  max-width: 700px;
   margin: 30px auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
@@ -55,10 +55,16 @@ body {
   font-size: 1.8em;
 }
 
+.card h3 {
+  color: #764ba2;
+  margin: 15px 0 10px 0;
+  font-size: 1.3em;
+}
+
 .card p {
   color: #555;
-  line-height: 1.6;
-  margin: 10px 0;
+  line-height: 1.8;
+  margin: 12px 0;
 }
 
 button {
@@ -84,7 +90,7 @@ button:disabled {
   cursor: not-allowed;
 }
 
-input, textarea {
+input, textarea, select {
   padding: 12px;
   margin: 10px 0;
   width: 100%;
@@ -95,7 +101,7 @@ input, textarea {
   transition: border-color 0.3s;
 }
 
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: #667eea;
 }
@@ -103,16 +109,6 @@ input:focus, textarea:focus {
 textarea {
   resize: vertical;
   min-height: 100px;
-}
-
-.score {
-  font-size: 24px;
-  font-weight: bold;
-  color: #667eea;
-  background: #f0f0f0;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 15px 0;
 }
 
 .lang-selector {
@@ -142,17 +138,6 @@ textarea {
   transform: scale(1.05);
 }
 
-.button-group {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.button-group.full {
-  grid-template-columns: 1fr;
-}
-
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -173,162 +158,6 @@ textarea {
   padding: 8px 16px;
   font-size: 0.9em;
   margin: 0;
-}
-
-.result {
-  margin-top: 15px;
-  padding: 15px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.result.correct {
-  background: #d4edda;
-  color: #155724;
-  border: 1px solid #c3e6cb;
-}
-
-.result.wrong {
-  background: #f8d7da;
-  color: #721c24;
-  border: 1px solid #f5c6cb;
-}
-
-.question-box {
-  background: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  border-left: 4px solid #667eea;
-  margin: 20px 0;
-}
-
-.mini-game-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.game-card {
-  background: #f5f5f5;
-  padding: 15px;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  transition: all 0.3s;
-  border: 2px solid transparent;
-}
-
-.game-card:hover {
-  transform: translateY(-5px);
-  border-color: #667eea;
-  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
-}
-
-.game-card h3 {
-  color: #667eea;
-  margin: 10px 0;
-}
-
-canvas {
-  border: 2px solid #e0e0e0;
-  border-radius: 8px;
-  margin: 20px 0;
-  max-width: 100%;
-}
-
-.shape-options {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.shape-option {
-  padding: 12px;
-  background: #f5f5f5;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-weight: 600;
-  color: #667eea;
-}
-
-.shape-option:hover {
-  border-color: #667eea;
-}
-
-.shape-option.selected {
-  background: #667eea;
-  color: white;
-  border-color: #667eea;
-}
-
-.ai-tutor-container {
-  background: #f9f9f9;
-  border-radius: 8px;
-  padding: 20px;
-  max-height: 400px;
-  overflow-y: auto;
-}
-
-.message {
-  margin: 10px 0;
-  padding: 12px;
-  border-radius: 8px;
-  word-wrap: break-word;
-}
-
-.message.student {
-  background: #667eea;
-  color: white;
-  margin-left: 20px;
-  text-align: right;
-}
-
-.message.tutor {
-  background: #e8f1ff;
-  color: #333;
-  margin-right: 20px;
-  border-left: 4px solid #667eea;
-}
-
-.typing-indicator {
-  padding: 10px;
-  color: #667eea;
-  font-style: italic;
-}
-
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: #e0e0e0;
-  border-radius: 4px;
-  margin: 15px 0;
-  overflow: hidden;
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-  transition: width 0.3s ease;
-}
-
-.level-badge {
-  display: inline-block;
-  background: #667eea;
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-weight: 600;
-  margin: 10px 5px;
-}
-
-.emoji {
-  font-size: 1.2em;
-  margin-right: 5px;
 }
 
 .stats-grid {
@@ -358,15 +187,231 @@ canvas {
   color: #667eea;
 }
 
-.badge {
-  display: inline-block;
-  background: #ffc107;
-  color: #333;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.8em;
+.diagnostic-question {
+  background: #f0f7ff;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  margin: 15px 0;
+}
+
+.diagnostic-question p {
+  font-size: 1.1em;
   font-weight: 600;
-  margin: 5px 2px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.confidence-scale {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.confidence-btn {
+  flex: 1;
+  padding: 12px;
+  border: 2px solid #ddd;
+  background: white;
+  color: #666;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.confidence-btn:hover {
+  border-color: #667eea;
+}
+
+.confidence-btn.selected {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.difficulty-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.difficulty-card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.difficulty-card:hover {
+  transform: translateY(-5px);
+  border-color: #667eea;
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.difficulty-card h4 {
+  color: #667eea;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.difficulty-card p {
+  font-size: 0.9em;
+  color: #999;
+}
+
+.error-analysis {
+  background: #fff3cd;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+  margin: 15px 0;
+}
+
+.error-analysis h4 {
+  color: #856404;
+  margin-bottom: 10px;
+}
+
+.error-type {
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin: 8px 0;
+  border-left: 3px solid #ffc107;
+}
+
+.hint-box {
+  background: #d1ecf1;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #17a2b8;
+  margin: 15px 0;
+}
+
+.hint-box h5 {
+  color: #0c5460;
+  margin-bottom: 10px;
+}
+
+.hint-box p {
+  color: #0c5460;
+  margin: 8px 0;
+}
+
+.success-message {
+  background: #d4edda;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid #28a745;
+  margin: 15px 0;
+  color: #155724;
+  font-weight: 600;
+}
+
+.geogebra-workspace {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  margin: 15px 0;
+  min-height: 300px;
+  text-align: center;
+}
+
+.geogebra-workspace p {
+  color: #999;
+  font-style: italic;
+  margin-top: 100px;
+}
+
+.challenge-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 15px 0;
+}
+
+.challenge-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.challenge-card p {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.button-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.button-group.full {
+  grid-template-columns: 1fr;
+}
+
+.emoji {
+  font-size: 1.2em;
+  margin-right: 8px;
+}
+
+.progress-indicator {
+  background: #e0e0e0;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.question-box {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #667eea;
+  margin: 20px 0;
+}
+
+.input-group {
+  margin: 15px 0;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.real-life-scenario {
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  padding: 25px;
+  border-radius: 12px;
+  margin: 15px 0;
+  border-left: 4px solid #4caf50;
+}
+
+.real-life-scenario h4 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.real-life-scenario p {
+  color: #1b5e20;
+  line-height: 1.8;
 }
 
 </style>
@@ -377,8 +422,8 @@ canvas {
 <!-- LANGUAGE SELECTION PAGE -->
 <div id="langSelection" class="page active">
   <div class="card">
-    <h1>SmartMath</h1>
-    <p style="font-size: 1.1em; margin-bottom: 30px;">Choose Your Language / Pilih Bahasa Anda</p>
+    <h1>🧮 MyOT_G SmartMath</h1>
+    <p style="font-size: 1.1em; margin-bottom: 30px; color: #667eea; font-weight: 600;">Sistem Pembelajaran Matematik Interaktif Berasaskan AI</p>
     
     <div class="lang-selector">
       <button class="lang-btn" onclick="setLanguage('en')">
@@ -394,7 +439,7 @@ canvas {
 <!-- LOGIN PAGE -->
 <div id="login" class="page">
   <div class="card">
-    <h1><span class="emoji">📊</span>SmartMath</h1>
+    <h1><span class="emoji">🧮</span>MyOT_G SmartMath</h1>
     <p id="loginSubtitle"></p>
 
     <input type="text" id="studentName" placeholder="">
@@ -410,16 +455,40 @@ canvas {
   </div>
 </div>
 
-<!-- MENU PAGE -->
-<div id="menu" class="page">
+<!-- DIAGNOSTIC TEST PAGE -->
+<div id="diagnostic" class="page">
+  <div class="topbar">
+    <div>
+      <h3 id="diagnosticTitle"></h3>
+      <p id="studentNameDisplay" style="color: #667eea; font-weight: 600;"></p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="diagnosticSubtitle"></h2>
+    <p id="diagnosticDesc"></p>
+
+    <div id="diagnosticContent"></div>
+
+    <button onclick="continueDiagnostic()" style="width: 100%;">
+      <span id="nextBtnText"></span>
+    </button>
+  </div>
+</div>
+
+<!-- MAIN MENU PAGE -->
+<div id="mainMenu" class="page">
   <div class="topbar">
     <div>
       <h3 id="welcomeText"></h3>
-      <p id="studentNameDisplay" style="color: #667eea; font-weight: 600;"></p>
+      <p id="studentNameMenuDisplay" style="color: #667eea; font-weight: 600;"></p>
     </div>
     <div style="text-align: right;">
-      <div class="score" id="scoreDisplay">Score: 0</div>
-      <button onclick="logout()" style="padding: 8px 16px; font-size: 0.9em;">
+      <div style="color: #667eea; font-weight: 600; font-size: 1.1em;">
+        <span id="levelText"></span>: <span id="currentLevel">1</span> | 
+        <span id="pointsText"></span>: <span id="totalPoints">0</span>
+      </div>
+      <button onclick="logout()" style="padding: 8px 16px; font-size: 0.9em; margin-top: 10px;">
         <span id="logoutBtnText"></span>
       </button>
     </div>
@@ -428,264 +497,157 @@ canvas {
   <div class="card">
     <h2 id="menuTitle"></h2>
 
-    <div class="stats-grid">
-      <div class="stat-box">
-        <h4 id="totalPointsLabel"></h4>
-        <div class="value" id="totalPoints">0</div>
-      </div>
-      <div class="stat-box">
-        <h4 id="levelLabel"></h4>
-        <div class="value" id="currentLevel">1</div>
-      </div>
-    </div>
-
-    <h3 id="topicsTitle" style="margin-top: 30px; margin-bottom: 15px;"></h3>
+    <h3 id="learningModesTitle"></h3>
     <div class="button-group full">
-      <button onclick="goToTopic('linear')">
-        <span class="emoji">📈</span><span id="linearTopicText"></span>
+      <button onclick="goToPage('adaptiveLearning')">
+        <span class="emoji">🎯</span><span id="adaptiveText"></span>
       </button>
-      <button onclick="goToTopic('quadratic')">
-        <span class="emoji">∩</span><span id="quadTopicText"></span>
+      <button onclick="goToPage('geogebraMode')">
+        <span class="emoji">📊</span><span id="geogebraText"></span>
       </button>
-    </div>
-
-    <h3 id="miniGamesTitle" style="margin-top: 30px; margin-bottom: 15px;"></h3>
-    <div class="button-group">
-      <button onclick="goToPage('shapeGuess')">
-        <span class="emoji">🎨</span><span id="shapeGameText"></span>
-      </button>
-      <button onclick="goToPage('graphMatch')">
-        <span class="emoji">🧩</span><span id="matchGameText"></span>
-      </button>
-    </div>
-
-    <h3 id="aiTutorTitle" style="margin-top: 30px; margin-bottom: 15px;"></h3>
-    <div class="button-group full">
-      <button onclick="goToPage('aiTutor')">
-        <span class="emoji">🤖</span><span id="aiTutorText"></span>
-      </button>
-    </div>
-
-    <h3 id="level2Title" style="margin-top: 30px; margin-bottom: 15px; display: none;"></h3>
-    <button id="level2Btn" style="display: none; width: 100%;" onclick="goToPage('level2')">
-      <span class="emoji">🔓</span><span id="level2BtnText"></span>
-    </button>
-  </div>
-</div>
-
-<!-- GRAF LINEAR -->
-<div id="linear" class="page">
-  <div class="card">
-    <button onclick="goToPage('menu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
-      ← <span id="backText"></span>
-    </button>
-    
-    <h2 id="linearTitle"></h2>
-
-    <div class="question-box">
-      <p id="linearProblem"></p>
-    </div>
-
-    <input type="number" id="linearAns" placeholder="">
-    <br>
-
-    <button onclick="checkLinear()">
-      <span id="submitBtnText"></span>
-    </button>
-
-    <button onclick="showHint('hintLinear')">
-      <span id="hintBtnText"></span>
-    </button>
-
-    <div id="linearResult"></div>
-  </div>
-</div>
-
-<!-- HINT LINEAR -->
-<div id="hintLinear" class="page">
-  <div class="card">
-    <h2 id="hintTitle"></h2>
-    <p id="linearHint"></p>
-    <button onclick="goToPage('linear')">
-      <span id="backText"></span>
-    </button>
-  </div>
-</div>
-
-<!-- GRAF KUADRATIK -->
-<div id="quadratic" class="page">
-  <div class="card">
-    <button onclick="goToPage('menu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
-      ← <span id="backText"></span>
-    </button>
-    
-    <h2 id="quadTitle"></h2>
-
-    <div class="question-box">
-      <p id="quadProblem"></p>
-    </div>
-
-    <input type="number" id="quadAns" placeholder="">
-    <br>
-
-    <button onclick="checkQuadratic()">
-      <span id="submitBtnText"></span>
-    </button>
-
-    <button onclick="showHint('hintQuad')">
-      <span id="hintBtnText"></span>
-    </button>
-
-    <div id="quadResult"></div>
-  </div>
-</div>
-
-<!-- HINT QUADRATIC -->
-<div id="hintQuad" class="page">
-  <div class="card">
-    <h2 id="hintTitle"></h2>
-    <p id="quadHint"></p>
-    <button onclick="goToPage('quadratic')">
-      <span id="backText"></span>
-    </button>
-  </div>
-</div>
-
-<!-- SHAPE GUESS GAME -->
-<div id="shapeGuess" class="page">
-  <div class="card">
-    <button onclick="goToPage('menu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
-      ← <span id="backText"></span>
-    </button>
-    
-    <h2 id="shapeGameTitle"></h2>
-    <p id="shapeGameDesc"></p>
-
-    <div style="margin: 20px 0;">
-      <p id="shapeInstruction"></p>
-      <canvas id="shapeCanvas" width="300" height="300"></canvas>
-    </div>
-
-    <div class="shape-options" id="shapeOptions"></div>
-
-    <div id="shapeGameResult"></div>
-
-    <button onclick="nextShapeGame()" style="display: none;" id="nextShapeBtn">
-      <span id="nextBtnText"></span>
-    </button>
-  </div>
-</div>
-
-<!-- GRAPH MATCHING GAME -->
-<div id="graphMatch" class="page">
-  <div class="card">
-    <button onclick="goToPage('menu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
-      ← <span id="backText"></span>
-    </button>
-    
-    <h2 id="matchGameTitle"></h2>
-    <p id="matchGameDesc"></p>
-
-    <div class="question-box">
-      <p id="matchEquation"></p>
-    </div>
-
-    <p id="matchInstruction"></p>
-
-    <div style="margin: 20px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-      <div>
-        <p style="font-weight: 600; margin-bottom: 10px;" id="yourGraphLabel"></p>
-        <canvas id="matchCanvas" width="250" height="250"></canvas>
-      </div>
-      <div>
-        <p style="font-weight: 600; margin-bottom: 10px;" id="correctLabel"></p>
-        <canvas id="referenceCanvas" width="250" height="250"></canvas>
-      </div>
     </div>
 
     <div class="button-group full">
-      <button onclick="checkMatch()">
-        <span id="submitBtnText"></span>
+      <button onclick="goToPage('escapeRoom')">
+        <span class="emoji">🔓</span><span id="escapeRoomText"></span>
       </button>
-      <button onclick="nextMatchGame()">
-        <span id="nextBtnText"></span>
+      <button onclick="goToPage('realLife')">
+        <span class="emoji">🌍</span><span id="realLifeText"></span>
       </button>
     </div>
 
-    <div id="matchResult"></div>
-  </div>
-</div>
-
-<!-- AI TUTOR PAGE -->
-<div id="aiTutor" class="page">
-  <div class="card">
-    <button onclick="goToPage('menu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
-      ← <span id="backText"></span>
-    </button>
-    
-    <h2 id="aiTutorPageTitle"></h2>
-    <p id="aiTutorDesc"></p>
-
-    <div class="ai-tutor-container" id="chatContainer">
-      <div class="message tutor" id="initialMessage"></div>
-    </div>
-
-    <textarea id="studentQuestion" placeholder=""></textarea>
-    <br>
-
-    <button onclick="sendQuestion()">
-      <span class="emoji">➤</span><span id="sendText"></span>
-    </button>
-
-    <div style="margin-top: 20px; padding: 15px; background: #f5f5f5; border-radius: 8px;">
-      <p id="suggestedTopicsLabel" style="font-weight: 600; margin-bottom: 10px;"></p>
-      <div id="suggestedTopics"></div>
+    <h3 id="advancedFeaturesTitle"></h3>
+    <div class="button-group full">
+      <button onclick="goToPage('collaborativeBoard')">
+        <span class="emoji">👥</span><span id="collaborativeText"></span>
+      </button>
+      <button onclick="goToPage('arScanner')">
+        <span class="emoji">📱</span><span id="arText"></span>
+      </button>
     </div>
   </div>
 </div>
 
-<!-- LEVEL 2 PAGE -->
-<div id="level2" class="page">
+<!-- ADAPTIVE LEARNING PAGE -->
+<div id="adaptiveLearning" class="page">
   <div class="card">
-    <button onclick="goToPage('menu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
+    <button onclick="goToPage('mainMenu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
       ← <span id="backText"></span>
     </button>
     
-    <h2 id="level2Title"></h2>
+    <h2 id="adaptiveTitle"></h2>
+    <p id="adaptiveDesc"></p>
 
-    <p id="level2Desc"></p>
+    <div id="difficultySelector"></div>
 
-    <div class="stats-grid">
-      <div class="stat-box">
-        <h4 id="totalTopicsLabel"></h4>
-        <div class="value">3+</div>
-      </div>
-      <div class="stat-box">
-        <h4 id="totalGamesLabel"></h4>
-        <div class="value">∞</div>
-      </div>
+    <div id="adaptiveContent"></div>
+
+    <button onclick="submitAdaptiveAnswer()" style="width: 100%; margin-top: 20px;">
+      <span id="submitText"></span>
+    </button>
+  </div>
+</div>
+
+<!-- GEOGEBRA MODE PAGE -->
+<div id="geogebraMode" class="page">
+  <div class="card">
+    <button onclick="goToPage('mainMenu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
+      ← <span id="backText"></span>
+    </button>
+    
+    <h2 id="geogebraTitle"></h2>
+    <p id="geogebraDesc"></p>
+
+    <div class="geogebra-workspace" id="geogebraWorkspace">
+      <p id="geogebraPlaceholder"></p>
     </div>
 
-    <p id="level2Features" style="margin-top: 20px; line-height: 1.8;"></p>
-
-    <button onclick="goToPage('menu')">
+    <button onclick="goToPage('mainMenu')" style="width: 100%;">
       <span id="backToMenuText"></span>
     </button>
   </div>
 </div>
 
-<!-- SUCCESS PAGE -->
-<div id="success" class="page">
+<!-- ESCAPE ROOM PAGE -->
+<div id="escapeRoom" class="page">
   <div class="card">
-    <h1><span class="emoji">🏆</span><span id="congratsText"></span></h1>
+    <button onclick="goToPage('mainMenu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
+      ← <span id="backText"></span>
+    </button>
+    
+    <h2 id="escapeRoomTitle"></h2>
 
-    <p id="successMsg"></p>
+    <div class="challenge-card" id="challengeDisplay"></div>
 
-    <div class="score" id="finalScoreDisplay">Score: 0</div>
+    <div id="escapeRoomContent"></div>
 
-    <div id="achievementsList"></div>
+    <button onclick="submitEscapeRoomAnswer()" style="width: 100%; margin-top: 20px;">
+      <span id="submitText"></span>
+    </button>
+  </div>
+</div>
 
-    <button onclick="goToPage('menu')">
+<!-- REAL-LIFE MATHEMATICS PAGE -->
+<div id="realLife" class="page">
+  <div class="card">
+    <button onclick="goToPage('mainMenu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
+      ← <span id="backText"></span>
+    </button>
+    
+    <h2 id="realLifeTitle"></h2>
+    <p id="realLifeDesc"></p>
+
+    <div class="input-group">
+      <label id="careerSelectLabel"></label>
+      <select id="careerSelect" onchange="loadRealLifeScenario()">
+        <option value="">-- <span id="selectCareerText"></span> --</option>
+      </select>
+    </div>
+
+    <div id="realLifeScenario"></div>
+
+    <button onclick="submitRealLifeAnswer()" style="width: 100%; margin-top: 20px;">
+      <span id="submitText"></span>
+    </button>
+  </div>
+</div>
+
+<!-- COLLABORATIVE BOARD PAGE -->
+<div id="collaborativeBoard" class="page">
+  <div class="card">
+    <button onclick="goToPage('mainMenu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
+      ← <span id="backText"></span>
+    </button>
+    
+    <h2 id="collaborativeTitle"></h2>
+    <p id="collaborativeDesc"></p>
+
+    <div style="background: #f0f7ff; padding: 20px; border-radius: 8px; margin: 20px 0; min-height: 250px;">
+      <p id="collaborativePlaceholder" style="color: #999; text-align: center; margin-top: 100px;"></p>
+    </div>
+
+    <button onclick="goToPage('mainMenu')" style="width: 100%;">
+      <span id="backToMenuText"></span>
+    </button>
+  </div>
+</div>
+
+<!-- AR SCANNER PAGE -->
+<div id="arScanner" class="page">
+  <div class="card">
+    <button onclick="goToPage('mainMenu')" style="float: right; padding: 8px 16px; font-size: 0.9em;">
+      ← <span id="backText"></span>
+    </button>
+    
+    <h2 id="arTitle"></h2>
+    <p id="arDesc"></p>
+
+    <div style="background: #f0f7ff; padding: 40px; border-radius: 8px; margin: 20px 0; text-align: center;">
+      <p style="font-size: 3em; margin: 20px 0;">📱</p>
+      <p id="arPlaceholder" style="color: #667eea; font-weight: 600;"></p>
+    </div>
+
+    <button onclick="goToPage('mainMenu')" style="width: 100%;">
       <span id="backToMenuText"></span>
     </button>
   </div>
