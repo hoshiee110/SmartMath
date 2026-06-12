@@ -1,113 +1,87 @@
-// Language and Translation System
+// Translations for MyOT_G SmartMath
 const translations = {
   en: {
-    loginSubtitle: "Learn Graphs Interactively",
+    loginSubtitle: "Interactive Mathematics Learning System Based on AI",
     studentNamePlaceholder: "Enter your name",
     loginBtnText: "Log In",
     changeLangText: "Change Language",
     welcomeText: "Welcome back!",
     logoutBtnText: "Logout",
-    menuTitle: "Select Topic",
-    totalPointsLabel: "Total Points",
-    levelLabel: "Current Level",
-    topicsTitle: "📚 Topics",
-    linearTopicText: "Linear Graphs",
-    quadTopicText: "Quadratic Graphs",
-    miniGamesTitle: "🎮 Mini Games",
-    shapeGameText: "Shape Guesser",
-    matchGameText: "Graph Matcher",
-    aiTutorTitle: "📖 Learn More",
-    aiTutorText: "AI Tutor - Ask Questions",
-    level2Title: "Advanced Topics",
-    level2BtnText: "Level 2 - Advanced Content",
+    diagnosticTitle: "Student Diagnostic Assessment",
+    diagnosticSubtitle: "Let's assess your current level",
+    diagnosticDesc: "Answer a few questions to help us understand your strengths and areas for improvement.",
+    menuTitle: "Choose Your Learning Path",
+    levelText: "Level",
+    pointsText: "Points",
+    learningModesTitle: "📚 Learning Modes",
+    adaptiveText: "Adaptive Learning - AI Difficulty",
+    geogebraText: "Interactive GeoGebra Workspace",
+    escapeRoomText: "Escape Room Challenge",
+    realLifeText: "Real-Life Mathematics",
+    advancedFeaturesTitle: "🚀 Advanced Features",
+    collaborativeText: "Collaborative Problem Solving",
+    arText: "AR Mathematics Scanner",
+    adaptiveTitle: "Adaptive Learning Mode",
+    adaptiveDesc: "Personalized questions based on your diagnostic results. The difficulty adjusts as you progress!",
+    geogebraTitle: "Interactive GeoGebra Workspace",
+    geogebraDesc: "Explore mathematical concepts through dynamic visualization. Manipulate functions and see real-time changes.",
+    geogebraPlaceholder: "GeoGebra workspace will load here. Explore graphs, functions, and transformations interactively!",
+    escapeRoomTitle: "🔓 Escape Room Challenge",
+    realLifeTitle: "🌍 Real-Life Mathematics",
+    realLifeDesc: "See how mathematics applies to real-world careers and scenarios.",
+    selectCareerText: "Select a career",
+    collaborativeTitle: "👥 Collaborative Board",
+    collaborativeDesc: "Work together with classmates on mathematics problems. Share reasoning and solve as a team!",
+    collaborativePlaceholder: "Collaborative workspace - Discuss and solve problems together in real-time!",
+    arTitle: "📱 AR Mathematics Scanner",
+    arDesc: "Use your device camera to scan real-world objects and discover the mathematics within them!",
+    arPlaceholder: "Point your camera at a bridge, building, or road to discover hidden mathematics.",
     backText: "Back",
-    submitBtnText: "Submit",
-    hintBtnText: "Get Hint",
-    linearTitle: "Linear Graphs",
-    linearProblem: "For the equation: <br><strong>y = 2x + 3</strong><br><br>What is the value of y when x = 2?",
-    linearHint: "Substitute x = 2 into the equation. y = 2(2) + 3 = 4 + 3 = ?",
-    quadTitle: "Quadratic Graphs",
-    quadProblem: "For the equation: <br><strong>y = x² - 4x + 3</strong><br><br>Find the minimum value of the graph.",
-    quadHint: "Use the formula: x = -b / 2a. Here a = 1, b = -4. Then substitute back into the equation.",
-    hintTitle: "Hint",
-    shapeGameTitle: "Shape Identifier",
-    shapeGameDesc: "Identify the shape of the graph based on its characteristics.",
-    shapeInstruction: "What type of graph is this?",
-    matchGameTitle: "Graph Matcher",
-    matchGameDesc: "Match the equation with its correct graph representation.",
-    matchEquation: "Which graph matches this equation?",
-    matchInstruction: "Check if your drawn graph matches the reference.",
-    yourGraphLabel: "Your Drawing",
-    correctLabel: "Expected Graph",
-    aiTutorPageTitle: "AI Tutor",
-    aiTutorDesc: "Ask any question about graphs and get personalized help!",
-    studentQuestion: "Ask your question here...",
-    sendText: "Send",
-    suggestedTopicsLabel: "📌 Suggested Topics:",
-    level2Desc: "You've unlocked Level 2! Explore more advanced topics and challenges.",
-    totalTopicsLabel: "Topics",
-    totalGamesLabel: "Games",
-    level2Features: "✨ Advanced quadratic forms<br>✨ Cubic and polynomial graphs<br>✨ Interactive graph builders<br>✨ Challenge modes<br>✨ Certificate on completion",
+    nextBtnText: "Next",
+    submitText: "Submit Answer",
     backToMenuText: "Back to Menu",
-    congratsText: "Congratulations!",
-    successMsg: "You've completed SmartMath challenges!",
-    shapeOptions: ["Linear (Straight Line)", "Parabola (U-shape)", "Cubic (S-shape)"],
-    nextBtnText: "Next Question",
   },
   
   my: {
-    loginSubtitle: "Belajar Graf Dengan Interaktif",
+    loginSubtitle: "Sistem Pembelajaran Matematik Interaktif Berasaskan AI",
     studentNamePlaceholder: "Masukkan nama anda",
     loginBtnText: "Log Masuk",
     changeLangText: "Tukar Bahasa",
     welcomeText: "Selamat kembali!",
     logoutBtnText: "Log Keluar",
-    menuTitle: "Pilih Topik",
-    totalPointsLabel: "Jumlah Mata",
-    levelLabel: "Tahap Semasa",
-    topicsTitle: "📚 Topik",
-    linearTopicText: "Graf Linear",
-    quadTopicText: "Graf Kuadratik",
-    miniGamesTitle: "🎮 Mini Permainan",
-    shapeGameText: "Teka Bentuk",
-    matchGameText: "Padankan Graf",
-    aiTutorTitle: "📖 Belajar Lebih",
-    aiTutorText: "Tutor AI - Tanya Soalan",
-    level2Title: "Topik Lanjutan",
-    level2BtnText: "Tahap 2 - Kandungan Lanjutan",
+    diagnosticTitle: "Penilaian Diagnostik Pelajar",
+    diagnosticSubtitle: "Mari kita nilai tahap semasa anda",
+    diagnosticDesc: "Jawab beberapa soalan untuk membantu kami memahami kekuatan dan bidang penambahbaikan anda.",
+    menuTitle: "Pilih Laluan Pembelajaran Anda",
+    levelText: "Tahap",
+    pointsText: "Mata",
+    learningModesTitle: "📚 Mod Pembelajaran",
+    adaptiveText: "Pembelajaran Adaptif - Kesukaran AI",
+    geogebraText: "Ruang Kerja GeoGebra Interaktif",
+    escapeRoomText: "Cabaran Bilik Melepasi",
+    realLifeText: "Matematik Kehidupan Sebenar",
+    advancedFeaturesTitle: "🚀 Ciri Lanjutan",
+    collaborativeText: "Penyelesaian Masalah Kolaboratif",
+    arText: "Pemindai Matematik AR",
+    adaptiveTitle: "Mod Pembelajaran Adaptif",
+    adaptiveDesc: "Soalan yang dipersonalisasi berdasarkan hasil diagnostik anda. Kesukaran berubah seiring kemajuan anda!",
+    geogebraTitle: "Ruang Kerja GeoGebra Interaktif",
+    geogebraDesc: "Jelajahi konsep matematik melalui visualisasi dinamik. Manipulasi fungsi dan lihat perubahan masa nyata.",
+    geogebraPlaceholder: "Ruang kerja GeoGebra akan dimuat di sini. Jelajahi graf, fungsi, dan transformasi secara interaktif!",
+    escapeRoomTitle: "🔓 Cabaran Bilik Melepasi",
+    realLifeTitle: "🌍 Matematik Kehidupan Sebenar",
+    realLifeDesc: "Lihat bagaimana matematik digunakan dalam kerjaya dan senario dunia sebenar.",
+    selectCareerText: "Pilih kerjaya",
+    collaborativeTitle: "👥 Papan Kolaboratif",
+    collaborativeDesc: "Bekerja bersama rakan sekelas untuk menyelesaikan masalah matematik. Kongsi penaakulan dan selesaikan bersama!",
+    collaborativePlaceholder: "Ruang kerja kolaboratif - Bincang dan selesaikan masalah bersama secara masa nyata!",
+    arTitle: "📱 Pemindai Matematik AR",
+    arDesc: "Gunakan kamera peranti anda untuk mengimbas objek dunia sebenar dan temui matematik di dalamnya!",
+    arPlaceholder: "Tunjukkan kamera anda ke jambatan, bangunan, atau jalan untuk menemui matematik tersembunyi.",
     backText: "Kembali",
-    submitBtnText: "Hantar",
-    hintBtnText: "Petua",
-    linearTitle: "Graf Linear",
-    linearProblem: "Bagi persamaan: <br><strong>y = 2x + 3</strong><br><br>Apakah nilai y apabila x = 2?",
-    linearHint: "Gantikan x = 2 ke dalam persamaan. y = 2(2) + 3 = 4 + 3 = ?",
-    quadTitle: "Graf Kuadratik",
-    quadProblem: "Bagi persamaan: <br><strong>y = x² - 4x + 3</strong><br><br>Cari nilai minimum graf.",
-    quadHint: "Gunakan formula: x = -b / 2a. Di sini a = 1, b = -4. Kemudian gantikan semula ke dalam persamaan.",
-    hintTitle: "Petua",
-    shapeGameTitle: "Pengenalan Bentuk",
-    shapeGameDesc: "Kenal pasti bentuk graf berdasarkan ciri-cirinya.",
-    shapeInstruction: "Jenis graf apakah ini?",
-    matchGameTitle: "Padankan Graf",
-    matchGameDesc: "Padankan persamaan dengan perwakilan graf yang betul.",
-    matchEquation: "Graf mana yang sepadan dengan persamaan ini?",
-    matchInstruction: "Semak sama ada graf anda dilukis sepadan dengan rujukan.",
-    yourGraphLabel: "Lukisan Anda",
-    correctLabel: "Graf Dijangka",
-    aiTutorPageTitle: "Tutor AI",
-    aiTutorDesc: "Tanya apa-apa soalan tentang graf dan dapatkan bantuan yang diperibadikan!",
-    studentQuestion: "Tanya soalan anda di sini...",
-    sendText: "Hantar",
-    suggestedTopicsLabel: "📌 Topik Cadangan:",
-    level2Desc: "Anda telah membuka Tahap 2! Terokai lebih banyak topik dan cabaran lanjutan.",
-    totalTopicsLabel: "Topik",
-    totalGamesLabel: "Permainan",
-    level2Features: "✨ Bentuk kuadratik lanjutan<br>✨ Graf kubik dan polinomial<br>✨ Pembina graf interaktif<br>✨ Mode cabaran<br>✨ Sijil setelah siap",
+    nextBtnText: "Seterusnya",
+    submitText: "Hantar Jawapan",
     backToMenuText: "Kembali ke Menu",
-    congratsText: "Tahniah!",
-    successMsg: "Anda telah menyelesaikan cabaran SmartMath!",
-    shapeOptions: ["Linear (Garis Lurus)", "Parabola (Bentuk U)", "Kubik (Bentuk S)"],
-    nextBtnText: "Soalan Seterusnya",
   }
 };
 
@@ -116,10 +90,11 @@ let currentLanguage = null;
 let studentName = null;
 let score = 0;
 let level = 1;
-let gameStats = {
-  topicsCompleted: [],
-  gamesPlayed: 0,
-  achievements: []
+let diagnosticStep = 0;
+let studentProfile = {
+  confidence: {},
+  weakTopics: [],
+  strengths: []
 };
 
 // Initialize
@@ -130,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateUIText();
     loadProgress();
     if (studentName) {
-      goToPage('menu');
+      goToPage('mainMenu');
     } else {
       goToPage('login');
     }
@@ -155,7 +130,6 @@ function updateUIText() {
   
   const t = translations[currentLanguage];
   
-  // Update all text elements safely
   const safeUpdate = (id, value, isHTML = false) => {
     const el = document.getElementById(id);
     if (el) {
@@ -164,68 +138,48 @@ function updateUIText() {
     }
   };
   
+  // Update all UI text elements
   safeUpdate('loginSubtitle', t.loginSubtitle);
-  safeUpdate('studentName', '', false);
   document.getElementById('studentName').placeholder = t.studentNamePlaceholder;
   safeUpdate('loginBtnText', t.loginBtnText);
   safeUpdate('changeLangText', t.changeLangText);
+  safeUpdate('diagnosticTitle', t.diagnosticTitle);
+  safeUpdate('diagnosticSubtitle', t.diagnosticSubtitle);
+  safeUpdate('diagnosticDesc', t.diagnosticDesc);
   safeUpdate('welcomeText', t.welcomeText);
   safeUpdate('logoutBtnText', t.logoutBtnText);
   safeUpdate('menuTitle', t.menuTitle);
-  safeUpdate('totalPointsLabel', t.totalPointsLabel);
-  safeUpdate('levelLabel', t.levelLabel);
-  safeUpdate('topicsTitle', t.topicsTitle);
-  safeUpdate('linearTopicText', t.linearTopicText);
-  safeUpdate('quadTopicText', t.quadTopicText);
-  safeUpdate('miniGamesTitle', t.miniGamesTitle);
-  safeUpdate('shapeGameText', t.shapeGameText);
-  safeUpdate('matchGameText', t.matchGameText);
-  safeUpdate('aiTutorTitle', t.aiTutorTitle);
-  safeUpdate('aiTutorText', t.aiTutorText);
-  safeUpdate('linearTitle', t.linearTitle);
-  safeUpdate('linearProblem', t.linearProblem, true);
-  safeUpdate('linearHint', t.linearHint);
-  safeUpdate('quadTitle', t.quadTitle);
-  safeUpdate('quadProblem', t.quadProblem, true);
-  safeUpdate('quadHint', t.quadHint);
-  safeUpdate('hintTitle', t.hintTitle);
-  safeUpdate('shapeGameTitle', t.shapeGameTitle);
-  safeUpdate('shapeGameDesc', t.shapeGameDesc);
-  safeUpdate('shapeInstruction', t.shapeInstruction);
-  safeUpdate('matchGameTitle', t.matchGameTitle);
-  safeUpdate('matchGameDesc', t.matchGameDesc);
-  safeUpdate('matchEquation', t.matchEquation);
-  safeUpdate('matchInstruction', t.matchInstruction);
-  safeUpdate('yourGraphLabel', t.yourGraphLabel);
-  safeUpdate('correctLabel', t.correctLabel);
-  safeUpdate('aiTutorPageTitle', t.aiTutorPageTitle);
-  safeUpdate('aiTutorDesc', t.aiTutorDesc);
-  document.getElementById('studentQuestion').placeholder = t.studentQuestion;
-  safeUpdate('sendText', t.sendText);
-  safeUpdate('suggestedTopicsLabel', t.suggestedTopicsLabel);
-  safeUpdate('initialMessage', t.aiTutorDesc);
-  safeUpdate('level2Title', t.level2Title);
-  safeUpdate('level2Desc', t.level2Desc);
-  safeUpdate('totalTopicsLabel', t.totalTopicsLabel);
-  safeUpdate('totalGamesLabel', t.totalGamesLabel);
-  safeUpdate('level2Features', t.level2Features, true);
-  safeUpdate('congratsText', t.congratsText);
-  safeUpdate('successMsg', t.successMsg);
+  safeUpdate('levelText', t.levelText);
+  safeUpdate('pointsText', t.pointsText);
+  safeUpdate('learningModesTitle', t.learningModesTitle);
+  safeUpdate('adaptiveText', t.adaptiveText);
+  safeUpdate('geogebraText', t.geogebraText);
+  safeUpdate('escapeRoomText', t.escapeRoomText);
+  safeUpdate('realLifeText', t.realLifeText);
+  safeUpdate('advancedFeaturesTitle', t.advancedFeaturesTitle);
+  safeUpdate('collaborativeText', t.collaborativeText);
+  safeUpdate('arText', t.arText);
+  safeUpdate('adaptiveTitle', t.adaptiveTitle);
+  safeUpdate('adaptiveDesc', t.adaptiveDesc);
+  safeUpdate('geogebraTitle', t.geogebraTitle);
+  safeUpdate('geogebraDesc', t.geogebraDesc);
+  safeUpdate('geogebraPlaceholder', t.geogebraPlaceholder);
+  safeUpdate('escapeRoomTitle', t.escapeRoomTitle);
+  safeUpdate('realLifeTitle', t.realLifeTitle);
+  safeUpdate('realLifeDesc', t.realLifeDesc);
+  safeUpdate('selectCareerText', t.selectCareerText);
+  safeUpdate('careerSelectLabel', t.selectCareerText);
+  safeUpdate('collaborativeTitle', t.collaborativeTitle);
+  safeUpdate('collaborativeDesc', t.collaborativeDesc);
+  safeUpdate('collaborativePlaceholder', t.collaborativePlaceholder);
+  safeUpdate('arTitle', t.arTitle);
+  safeUpdate('arDesc', t.arDesc);
+  safeUpdate('arPlaceholder', t.arPlaceholder);
   
-  // Update all button texts
-  document.querySelectorAll('#submitBtnText').forEach(el => el.textContent = t.submitBtnText);
-  document.querySelectorAll('#hintBtnText').forEach(el => el.textContent = t.hintBtnText);
   document.querySelectorAll('#backText').forEach(el => el.textContent = t.backText);
   document.querySelectorAll('#nextBtnText').forEach(el => el.textContent = t.nextBtnText);
+  document.querySelectorAll('#submitText').forEach(el => el.textContent = t.submitText);
   document.querySelectorAll('#backToMenuText').forEach(el => el.textContent = t.backToMenuText);
-  
-  // Update shape options
-  const shapeOptions = document.getElementById('shapeOptions');
-  if (shapeOptions) {
-    shapeOptions.innerHTML = t.shapeOptions.map((opt, i) => 
-      `<div class="shape-option" onclick="selectShape(${i})" id="shape${i}">${opt}</div>`
-    ).join('');
-  }
 }
 
 // Login System
@@ -237,11 +191,12 @@ function login() {
   }
   
   studentName = name;
-  saveProgress();
-  
+  diagnosticStep = 0;
   document.getElementById('studentNameDisplay').textContent = name;
+  document.getElementById('studentNameMenuDisplay').textContent = name;
   updateScore();
-  goToPage('menu');
+  startDiagnostic();
+  goToPage('diagnostic');
 }
 
 function logout() {
@@ -253,7 +208,6 @@ function logout() {
     studentName = null;
     score = 0;
     level = 1;
-    gameStats = { topicsCompleted: [], gamesPlayed: 0, achievements: [] };
     document.getElementById('studentName').value = '';
     localStorage.removeItem('smartmath_progress');
     goToPage('login');
@@ -267,320 +221,274 @@ function goToPage(page) {
   if (pageEl) {
     pageEl.classList.add('active');
   }
+}
+
+// DIAGNOSTIC SYSTEM
+function startDiagnostic() {
+  diagnosticStep = 0;
+  loadDiagnosticQuestion();
+}
+
+function loadDiagnosticQuestion() {
+  const diagnosticQuestions = [
+    {
+      en: "How confident are you with linear equations (y = mx + b)?",
+      my: "Berapa yakin anda dengan persamaan linear (y = mx + b)?"
+    },
+    {
+      en: "How confident are you with quadratic functions?",
+      my: "Berapa yakin anda dengan fungsi kuadratik?"
+    },
+    {
+      en: "How confident are you with functions and transformations?",
+      my: "Berapa yakin anda dengan fungsi dan transformasi?"
+    }
+  ];
+
+  const topics = ['linear', 'quadratic', 'functions'];
   
-  if (page === 'shapeGuess') {
-    setTimeout(() => drawRandomShape(), 100);
-  } else if (page === 'graphMatch') {
-    setTimeout(() => initGraphMatch(), 100);
-  } else if (page === 'aiTutor') {
-    setTimeout(() => initAITutor(), 100);
+  if (diagnosticStep < diagnosticQuestions.length) {
+    const q = diagnosticQuestions[diagnosticStep];
+    const topic = topics[diagnosticStep];
+    
+    const contentDiv = document.getElementById('diagnosticContent');
+    contentDiv.innerHTML = `
+      <div class="diagnostic-question">
+        <p>${q[currentLanguage]}</p>
+        <div class="confidence-scale">
+          <button class="confidence-btn" onclick="setConfidence('${topic}', 1)">❌ Not at all</button>
+          <button class="confidence-btn" onclick="setConfidence('${topic}', 2)">🤔 Somewhat</button>
+          <button class="confidence-btn" onclick="setConfidence('${topic}', 3)">✓ Confident</button>
+          <button class="confidence-btn" onclick="setConfidence('${topic}', 4)">🚀 Very Confident</button>
+        </div>
+      </div>
+    `;
+  } else {
+    goToPage('mainMenu');
   }
 }
 
-function goToTopic(topic) {
-  goToPage(topic);
-}
-
-function showHint(hintPage) {
-  goToPage(hintPage);
-}
-
-// Quiz System
-function checkLinear() {
-  const ans = document.getElementById('linearAns').value.trim();
-  const resultDiv = document.getElementById('linearResult');
+function setConfidence(topic, level) {
+  studentProfile.confidence[topic] = level;
   
-  if (ans === "7") {
-    score += 10;
-    resultDiv.innerHTML = '✅ ' + (currentLanguage === 'en' ? 'Correct! +10 points' : 'Betul! +10 mata');
-    resultDiv.className = 'result correct';
-    if (!gameStats.topicsCompleted.includes('linear')) {
-      gameStats.topicsCompleted.push('linear');
+  // Identify weak areas
+  if (level <= 2) {
+    if (!studentProfile.weakTopics.includes(topic)) {
+      studentProfile.weakTopics.push(topic);
     }
   } else {
-    resultDiv.innerHTML = '❌ ' + (currentLanguage === 'en' ? 'Wrong. Try again.' : 'Salah. Cuba lagi.');
-    resultDiv.className = 'result wrong';
-  }
-  
-  updateScore();
-  updateUnlock();
-}
-
-function checkQuadratic() {
-  const ans = document.getElementById('quadAns').value.trim();
-  const resultDiv = document.getElementById('quadResult');
-  
-  if (ans === "-1") {
-    score += 10;
-    resultDiv.innerHTML = '✅ ' + (currentLanguage === 'en' ? 'Correct! +10 points' : 'Betul! +10 mata');
-    resultDiv.className = 'result correct';
-    if (!gameStats.topicsCompleted.includes('quadratic')) {
-      gameStats.topicsCompleted.push('quadratic');
+    if (!studentProfile.strengths.includes(topic)) {
+      studentProfile.strengths.push(topic);
     }
+  }
+  
+  diagnosticStep++;
+  
+  // Show visual feedback
+  document.querySelectorAll('.confidence-btn').forEach(btn => btn.classList.remove('selected'));
+  event.target.classList.add('selected');
+  
+  setTimeout(() => {
+    loadDiagnosticQuestion();
+  }, 500);
+}
+
+function continueDiagnostic() {
+  if (diagnosticStep < 3) {
+    alert(currentLanguage === 'en' 
+      ? 'Please answer all questions first' 
+      : 'Sila jawab semua soalan terlebih dahulu');
   } else {
-    resultDiv.innerHTML = '❌ ' + (currentLanguage === 'en' ? 'Wrong. Try again.' : 'Salah. Cuba lagi.');
-    resultDiv.className = 'result wrong';
+    goToPage('mainMenu');
   }
-  
-  updateScore();
-  updateUnlock();
 }
 
-// Mini Games - Shape Guessing
-function drawLinearShape(ctx, w, h) {
-  ctx.clearRect(0, 0, w, h);
-  ctx.strokeStyle = '#667eea';
-  ctx.lineWidth = 3;
-  ctx.beginPath();
-  ctx.moveTo(0, h);
-  ctx.lineTo(w, 0);
-  ctx.stroke();
+// ADAPTIVE LEARNING SYSTEM
+function loadAdaptiveLearning() {
+  const difficultyDiv = document.getElementById('difficultySelector');
+  
+  const difficulties = [
+    { level: 'basic', en: 'Basic', my: 'Asas' },
+    { level: 'medium', en: 'Medium', my: 'Sederhana' },
+    { level: 'advanced', en: 'Advanced (HOTS)', my: 'Lanjutan (KBAT)' }
+  ];
+
+  let html = '<h3 style="margin-bottom: 15px; color: #667eea;">Choose Difficulty Level</h3><div class="difficulty-grid">';
+  
+  difficulties.forEach(diff => {
+    html += `
+      <div class="difficulty-card" onclick="setDifficulty('${diff.level}')">
+        <h4>${diff[currentLanguage]}</h4>
+        <p>${diff.level === 'basic' ? '📖' : diff.level === 'medium' ? '📚' : '🏆'}</p>
+      </div>
+    `;
+  });
+  
+  html += '</div>';
+  difficultyDiv.innerHTML = html;
 }
 
-function drawParabolaShape(ctx, w, h) {
-  ctx.clearRect(0, 0, w, h);
-  ctx.strokeStyle = '#667eea';
-  ctx.lineWidth = 3;
-  ctx.beginPath();
+function setDifficulty(level) {
+  const contentDiv = document.getElementById('adaptiveContent');
   
-  for (let x = 0; x <= w; x++) {
-    const y = Math.pow(x - w/2, 2) / 100 + 50;
-    if (x === 0) ctx.moveTo(x, y);
-    else ctx.lineTo(x, y);
-  }
-  ctx.stroke();
+  const questions = {
+    basic: {
+      en: 'What is the y-intercept of y = 2x + 3?',
+      my: 'Apakah pintasan-y bagi y = 2x + 3?',
+      answer: '3'
+    },
+    medium: {
+      en: 'Solve: 2x² - 8x + 6 = 0',
+      my: 'Selesaikan: 2x² - 8x + 6 = 0',
+      answer: '1,3'
+    },
+    advanced: {
+      en: 'If f(x) = x² + 2 and g(x) = 3x - 1, find f(g(2))',
+      my: 'Jika f(x) = x² + 2 dan g(x) = 3x - 1, cari f(g(2))',
+      answer: '27'
+    }
+  };
+
+  const q = questions[level];
+  
+  contentDiv.innerHTML = `
+    <div class="question-box">
+      <p><strong>${q[currentLanguage]}</strong></p>
+    </div>
+    <input type="text" id="adaptiveAnswer" placeholder="${currentLanguage === 'en' ? 'Your answer' : 'Jawapan anda'}">
+  `;
 }
 
-function drawCubicShape(ctx, w, h) {
-  ctx.clearRect(0, 0, w, h);
-  ctx.strokeStyle = '#667eea';
-  ctx.lineWidth = 3;
-  ctx.beginPath();
+function submitAdaptiveAnswer() {
+  const answer = document.getElementById('adaptiveAnswer').value.trim();
   
-  for (let x = 0; x <= w; x++) {
-    const normalized = (x - w/2) / 50;
-    const y = Math.pow(normalized, 3) * 30 + h/2;
-    if (x === 0) ctx.moveTo(x, y);
-    else ctx.lineTo(x, y);
-  }
-  ctx.stroke();
-}
-
-let currentShapeIndex = 0;
-let selectedShapeAnswer = null;
-
-function drawRandomShape() {
-  selectedShapeAnswer = null;
-  document.querySelectorAll('.shape-option').forEach(el => el.classList.remove('selected'));
-  
-  currentShapeIndex = Math.floor(Math.random() * 3);
-  const canvas = document.getElementById('shapeCanvas');
-  if (!canvas) return;
-  
-  const ctx = canvas.getContext('2d');
-  
-  if (currentShapeIndex === 0) {
-    drawLinearShape(ctx, canvas.width, canvas.height);
-  } else if (currentShapeIndex === 1) {
-    drawParabolaShape(ctx, canvas.width, canvas.height);
-  } else {
-    drawCubicShape(ctx, canvas.width, canvas.height);
-  }
-  
-  document.getElementById('shapeGameResult').innerHTML = '';
-  document.getElementById('nextShapeBtn').style.display = 'none';
-}
-
-function selectShape(shapeIndex) {
-  selectedShapeAnswer = shapeIndex;
-  document.querySelectorAll('.shape-option').forEach(el => el.classList.remove('selected'));
-  const btn = document.getElementById('shape' + shapeIndex);
-  if (btn) btn.classList.add('selected');
-  
-  setTimeout(() => checkShape(), 300);
-}
-
-function checkShape() {
-  const resultDiv = document.getElementById('shapeGameResult');
-  
-  if (selectedShapeAnswer === null) {
-    resultDiv.innerHTML = currentLanguage === 'en' 
-      ? '⚠️ Please select an answer' 
-      : '⚠️ Sila pilih jawapan';
+  if (!answer) {
+    alert(currentLanguage === 'en' ? 'Please enter an answer' : 'Sila masukkan jawapan');
     return;
   }
   
-  if (selectedShapeAnswer === currentShapeIndex) {
-    score += 5;
-    resultDiv.innerHTML = '✅ ' + (currentLanguage === 'en' ? 'Correct! +5 points' : 'Betul! +5 mata');
-    resultDiv.className = 'result correct';
-    gameStats.gamesPlayed++;
-  } else {
-    resultDiv.innerHTML = '❌ ' + (currentLanguage === 'en' ? 'Wrong. Try again.' : 'Salah. Cuba lagi.');
-    resultDiv.className = 'result wrong';
+  score += 10;
+  updateScore();
+  
+  alert(currentLanguage === 'en' 
+    ? 'Great! +10 points' 
+    : 'Bagus! +10 mata');
+}
+
+// REAL-LIFE MATHEMATICS SYSTEM
+function loadRealLifeScenario() {
+  const career = document.getElementById('careerSelect').value;
+  const scenarioDiv = document.getElementById('realLifeScenario');
+  
+  if (!career) {
+    scenarioDiv.innerHTML = '';
+    return;
   }
-  
-  document.getElementById('nextShapeBtn').style.display = 'inline-block';
-  updateScore();
-}
 
-function nextShapeGame() {
-  drawRandomShape();
-}
-
-// Mini Games - Graph Matching
-function initGraphMatch() {
-  const matchCanvas = document.getElementById('matchCanvas');
-  const referenceCanvas = document.getElementById('referenceCanvas');
-  
-  if (!matchCanvas || !referenceCanvas) return;
-  
-  const ctx1 = matchCanvas.getContext('2d');
-  const ctx2 = referenceCanvas.getContext('2d');
-  
-  // Clear and draw reference parabola
-  ctx2.clearRect(0, 0, referenceCanvas.width, referenceCanvas.height);
-  ctx2.strokeStyle = '#667eea';
-  ctx2.lineWidth = 2;
-  ctx2.beginPath();
-  
-  for (let x = 0; x <= 250; x++) {
-    const y = Math.pow(x - 125, 2) / 200 + 30;
-    if (x === 0) ctx2.moveTo(x, y);
-    else ctx2.lineTo(x, y);
-  }
-  ctx2.stroke();
-  
-  // Clear match canvas
-  ctx1.clearRect(0, 0, matchCanvas.width, matchCanvas.height);
-  ctx1.fillStyle = '#f5f5f5';
-  ctx1.fillRect(0, 0, matchCanvas.width, matchCanvas.height);
-  ctx1.fillStyle = '#999';
-  ctx1.font = '12px Arial';
-  ctx1.textAlign = 'center';
-  ctx1.fillText(currentLanguage === 'en' ? 'Draw here' : 'Lukis di sini', matchCanvas.width/2, matchCanvas.height/2);
-}
-
-function checkMatch() {
-  const resultDiv = document.getElementById('matchResult');
-  score += 7;
-  resultDiv.innerHTML = '✅ ' + (currentLanguage === 'en' ? 'Great! +7 points' : 'Bagus! +7 mata');
-  resultDiv.className = 'result correct';
-  updateScore();
-}
-
-function nextMatchGame() {
-  document.getElementById('matchResult').innerHTML = '';
-  initGraphMatch();
-}
-
-// AI Tutor System
-function initAITutor() {
-  const container = document.getElementById('chatContainer');
-  if (!container) return;
-  
-  container.innerHTML = '<div class="message tutor">' + 
-    (currentLanguage === 'en' 
-      ? 'Hi! I\'m your AI Tutor. Ask me anything about graphs - linear, quadratic, or more!' 
-      : 'Halo! Saya tutor AI anda. Tanya saya apa-apa tentang graf - linear, kuadratik, atau lebih!') +
-    '</div>';
-  
-  updateSuggestedTopics();
-}
-
-function sendQuestion() {
-  const question = document.getElementById('studentQuestion').value.trim();
-  if (!question) return;
-  
-  const container = document.getElementById('chatContainer');
-  if (!container) return;
-  
-  // Add student message
-  const studentMsg = document.createElement('div');
-  studentMsg.className = 'message student';
-  studentMsg.textContent = question;
-  container.appendChild(studentMsg);
-  
-  // Simulate AI response with typing
-  const typingDiv = document.createElement('div');
-  typingDiv.className = 'typing-indicator';
-  typingDiv.textContent = currentLanguage === 'en' ? 'AI Tutor is thinking...' : 'Tutor AI sedang berfikir...';
-  container.appendChild(typingDiv);
-  
-  container.scrollTop = container.scrollHeight;
-  
-  setTimeout(() => {
-    typingDiv.remove();
-    const aiResponse = generateAIResponse(question);
-    
-    const aiMsg = document.createElement('div');
-    aiMsg.className = 'message tutor';
-    aiMsg.textContent = aiResponse;
-    container.appendChild(aiMsg);
-    
-    container.scrollTop = container.scrollHeight;
-  }, 1500);
-  
-  document.getElementById('studentQuestion').value = '';
-  score += 2;
-  updateScore();
-}
-
-function generateAIResponse(question) {
-  const q = question.toLowerCase();
-  
-  const responses = {
-    en: {
-      linear: "Great question! Linear graphs are straight lines with the form y = mx + b, where m is the slope and b is the y-intercept. The slope tells you how steep the line is!",
-      quadratic: "Excellent! Quadratic graphs form parabolas (U-shaped curves) with the form y = ax² + bx + c. The vertex is the highest or lowest point on the graph.",
-      slope: "The slope is the rate of change. To find it, use (y₂ - y₁) / (x₂ - x₁) between two points on the line.",
-      vertex: "The vertex of a parabola is at x = -b/2a. Substitute this value back into the equation to find the y-coordinate!",
-      default: "That's an interesting question! Remember to practice plotting points and identifying patterns. Keep exploring!"
+  const scenarios = {
+    engineer: {
+      en: {
+        title: 'Bridge Design Challenge',
+        desc: 'Design an arch bridge using a parabola equation. The bridge must span 100m with a maximum height of 25m.',
+        task: 'Calculate the equation of the parabola and verify the heights at specific points.'
+      },
+      my: {
+        title: 'Cabaran Reka Jambatan',
+        desc: 'Reka bentuk jambatan melengkung menggunakan persamaan parabola. Jambatan mesti menjangkau 100m dengan ketinggian maksimum 25m.',
+        task: 'Kira persamaan parabola dan sahkan ketinggian pada titik tertentu.'
+      }
     },
-    my: {
-      linear: "Pertanyaan bagus! Graf linear adalah garis lurus dengan bentuk y = mx + b, di mana m adalah cerun dan b adalah pintasan-y. Cerun memberitahu anda betapa curamnya garisan!",
-      quadratic: "Bagus! Graf kuadratik membentuk parabola (lengkung berbentuk U) dengan bentuk y = ax² + bx + c. Puncak adalah titik tertinggi atau terendah pada graf.",
-      slope: "Cerun adalah kadar perubahan. Untuk mencarinya, gunakan (y₂ - y₁) / (x₂ - x₁) antara dua titik pada garis.",
-      vertex: "Puncak parabola berada di x = -b/2a. Gantikan nilai ini kembali ke dalam persamaan untuk mencari koordinat-y!",
-      default: "Itu soalan yang menarik! Ingat untuk berlatih memplot titik dan mengenal pasti corak. Terus terokai!"
+    architect: {
+      en: {
+        title: 'Building Layout Design',
+        desc: 'Design a building layout using geometric shapes. Calculate the area and perimeter for optimal space usage.',
+        task: 'Create a floor plan that maximizes usable area while minimizing costs.'
+      },
+      my: {
+        title: 'Reka Bentuk Susun Atur Bangunan',
+        desc: 'Reka bentuk susun atur bangunan menggunakan bentuk geometri. Kira luas dan perimeter untuk penggunaan ruang yang optimal.',
+        task: 'Cipta pelan lantai yang memaksimalkan kawasan yang boleh digunakan sambil meminimalkan kos.'
+      }
+    },
+    analyst: {
+      en: {
+        title: 'Data Analysis Project',
+        desc: 'Analyze sales data using linear regression. Predict future trends and create visualizations.',
+        task: 'Find the trend line equation and forecast sales for the next quarter.'
+      },
+      my: {
+        title: 'Projek Analisis Data',
+        desc: 'Analisis data jualan menggunakan regresi linear. Ramalkan trend masa depan dan cipta visualisasi.',
+        task: 'Cari persamaan garis trend dan ramalkan jualan untuk suku berikutnya.'
+      }
     }
   };
+
+  const scenario = scenarios[career];
+  if (!scenario) return;
+
+  const lang = currentLanguage === 'en' ? 'en' : 'my';
   
-  const lang = currentLanguage || 'en';
-  const responseSet = responses[lang];
-  
-  if (q.includes('linear') || q.includes('garis')) return responseSet.linear;
-  if (q.includes('quadratic') || q.includes('kuadratik')) return responseSet.quadratic;
-  if (q.includes('slope') || q.includes('cerun')) return responseSet.slope;
-  if (q.includes('vertex') || q.includes('puncak')) return responseSet.vertex;
-  return responseSet.default;
+  scenarioDiv.innerHTML = `
+    <div class="real-life-scenario">
+      <h4>${scenario[lang].title}</h4>
+      <p><strong>${scenario[lang].desc}</strong></p>
+      <p style="margin-top: 15px;">📋 <strong>${scenario[lang].task}</strong></p>
+    </div>
+    <textarea id="realLifeAnswer" placeholder="${currentLanguage === 'en' ? 'Your solution' : 'Penyelesaian anda'}"></textarea>
+  `;
 }
 
-function updateSuggestedTopics() {
-  const suggestedDiv = document.getElementById('suggestedTopics');
-  if (!suggestedDiv) return;
+function submitRealLifeAnswer() {
+  const answer = document.getElementById('realLifeAnswer').value.trim();
   
-  const topics = currentLanguage === 'en'
-    ? ['How do I find the slope?', 'What is a vertex?', 'How to draw a parabola?']
-    : ['Bagaimana cara mencari cerun?', 'Apakah itu puncak?', 'Bagaimana melukis parabola?'];
+  if (!answer) {
+    alert(currentLanguage === 'en' ? 'Please provide a solution' : 'Sila berikan penyelesaian');
+    return;
+  }
   
-  suggestedDiv.innerHTML = topics.map(topic => 
-    `<button style="margin: 5px; padding: 8px 12px; font-size: 0.9em;" onclick="setQuestionAndSend('${topic}');">${topic}</button>`
-  ).join('');
+  score += 15;
+  updateScore();
+  
+  alert(currentLanguage === 'en' 
+    ? 'Excellent work! +15 points' 
+    : 'Kerja yang cemerlang! +15 mata');
 }
 
-function setQuestionAndSend(question) {
-  document.getElementById('studentQuestion').value = question;
-  sendQuestion();
+function submitEscapeRoomAnswer() {
+  score += 20;
+  updateScore();
+  
+  alert(currentLanguage === 'en' 
+    ? 'You escaped! +20 points' 
+    : 'Anda terlepas! +20 mata');
 }
 
-// Progress Saving System
+// Scoring System
+function updateScore() {
+  const scoreDisplay = document.getElementById('totalPoints');
+  if (scoreDisplay) scoreDisplay.textContent = score;
+  
+  // Calculate level
+  if (score >= 100) level = 5;
+  else if (score >= 70) level = 4;
+  else if (score >= 40) level = 3;
+  else if (score >= 20) level = 2;
+  else level = 1;
+  
+  const levelDisplay = document.getElementById('currentLevel');
+  if (levelDisplay) levelDisplay.textContent = level;
+  
+  saveProgress();
+}
+
+// Progress Saving
 function saveProgress() {
   const progress = {
     studentName: studentName,
     score: score,
     level: level,
-    gameStats: gameStats,
+    studentProfile: studentProfile,
     timestamp: new Date().toISOString()
   };
   localStorage.setItem('smartmath_progress', JSON.stringify(progress));
@@ -592,68 +500,16 @@ function loadProgress() {
     try {
       const progress = JSON.parse(saved);
       studentName = progress.studentName;
-      score = progress.score;
-      level = progress.level;
-      gameStats = progress.gameStats || { topicsCompleted: [], gamesPlayed: 0, achievements: [] };
+      score = progress.score || 0;
+      level = progress.level || 1;
+      studentProfile = progress.studentProfile || { confidence: {}, weakTopics: [], strengths: [] };
       
       if (studentName) {
-        const nameEl = document.getElementById('studentName');
-        if (nameEl) nameEl.value = studentName;
-        const displayEl = document.getElementById('studentNameDisplay');
-        if (displayEl) displayEl.textContent = studentName;
+        document.getElementById('studentNameMenuDisplay').textContent = studentName;
         updateScore();
       }
     } catch (e) {
       console.error('Error loading progress:', e);
-    }
-  }
-}
-
-// Scoring and Unlocking System
-function updateScore() {
-  const scoreDisplay = document.getElementById('scoreDisplay');
-  if (scoreDisplay) scoreDisplay.textContent = 'Score: ' + score;
-  
-  const totalPoints = document.getElementById('totalPoints');
-  if (totalPoints) totalPoints.textContent = score;
-  
-  // Calculate level
-  if (score >= 50) level = 3;
-  else if (score >= 20) level = 2;
-  else level = 1;
-  
-  const levelDisplay = document.getElementById('currentLevel');
-  if (levelDisplay) levelDisplay.textContent = level;
-  
-  const level2Btn = document.getElementById('level2Btn');
-  const level2Title = document.getElementById('level2Title');
-  
-  if (level >= 2) {
-    if (level2Btn) level2Btn.style.display = 'inline-block';
-    if (level2Title) level2Title.style.display = 'block';
-  }
-  
-  if (level >= 3) {
-    if (!gameStats.achievements.includes('Advanced Learner')) {
-      gameStats.achievements.push('Advanced Learner');
-    }
-  }
-  
-  saveProgress();
-}
-
-function updateUnlock() {
-  updateScore();
-  
-  if (score >= 50) {
-    if (!gameStats.achievements.includes('Expert')) {
-      gameStats.achievements.push('Expert');
-    }
-  }
-  
-  if (gameStats.topicsCompleted.length === 2) {
-    if (!gameStats.achievements.includes('Topic Master')) {
-      gameStats.achievements.push('Topic Master');
     }
   }
 }
