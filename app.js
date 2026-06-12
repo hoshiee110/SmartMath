@@ -1,87 +1,143 @@
-// Translations for MyOT_G SmartMath
+// Translations
 const translations = {
   en: {
-    loginSubtitle: "Interactive Mathematics Learning System Based on AI",
+    subtitleLang: "Interactive Graph Learning System",
+    loginSubtitle: "Master Mathematics Through Interactive Learning",
     studentNamePlaceholder: "Enter your name",
     loginBtnText: "Log In",
     changeLangText: "Change Language",
-    welcomeText: "Welcome back!",
+    welcomeText: "Welcome!",
+    scoreLabel: "Score",
+    levelLabel: "Level",
     logoutBtnText: "Logout",
-    diagnosticTitle: "Student Diagnostic Assessment",
-    diagnosticSubtitle: "Let's assess your current level",
-    diagnosticDesc: "Answer a few questions to help us understand your strengths and areas for improvement.",
-    menuTitle: "Choose Your Learning Path",
-    levelText: "Level",
-    pointsText: "Points",
-    learningModesTitle: "📚 Learning Modes",
-    adaptiveText: "Adaptive Learning - AI Difficulty",
-    geogebraText: "Interactive GeoGebra Workspace",
-    escapeRoomText: "Escape Room Challenge",
-    realLifeText: "Real-Life Mathematics",
-    advancedFeaturesTitle: "🚀 Advanced Features",
-    collaborativeText: "Collaborative Problem Solving",
-    arText: "AR Mathematics Scanner",
-    adaptiveTitle: "Adaptive Learning Mode",
-    adaptiveDesc: "Personalized questions based on your diagnostic results. The difficulty adjusts as you progress!",
-    geogebraTitle: "Interactive GeoGebra Workspace",
-    geogebraDesc: "Explore mathematical concepts through dynamic visualization. Manipulate functions and see real-time changes.",
-    geogebraPlaceholder: "GeoGebra workspace will load here. Explore graphs, functions, and transformations interactively!",
-    escapeRoomTitle: "🔓 Escape Room Challenge",
-    realLifeTitle: "🌍 Real-Life Mathematics",
-    realLifeDesc: "See how mathematics applies to real-world careers and scenarios.",
-    selectCareerText: "Select a career",
-    collaborativeTitle: "👥 Collaborative Board",
-    collaborativeDesc: "Work together with classmates on mathematics problems. Share reasoning and solve as a team!",
-    collaborativePlaceholder: "Collaborative workspace - Discuss and solve problems together in real-time!",
-    arTitle: "📱 AR Mathematics Scanner",
-    arDesc: "Use your device camera to scan real-world objects and discover the mathematics within them!",
-    arPlaceholder: "Point your camera at a bridge, building, or road to discover hidden mathematics.",
+    menuTitle: "Choose Your Learning Activity",
+    graphQuizText: "📊 Graph Quiz (3 Difficulty Levels)",
+    shapeGameText: "🎨 Shape Guessing Game",
+    aiTutorText: "🤖 AI Math Tutor",
+    
+    // Graph Quiz
+    graphQuizTitle: "Graph Quiz Challenge",
+    graphQuizDesc: "Test your knowledge about different types of graphs. Answer questions based on graph properties, equations, and characteristics.",
+    difficultySelectText: "Select Difficulty Level:",
+    
+    // Easy Questions
+    easyQ1: "What is the y-intercept of y = 2x + 3?",
+    easyQ1Options: ["1", "2", "3", "4"],
+    easyQ1Answer: 2,
+    
+    easyQ2: "Which graph represents a linear function?",
+    easyQ2Options: ["Parabola", "Straight Line", "Circle", "Wave"],
+    easyQ2Answer: 1,
+    
+    // Medium Questions
+    mediumQ1: "What is the vertex of y = (x - 2)² + 3?",
+    mediumQ1Options: ["(2, 3)", "(-2, 3)", "(3, 2)", "(-3, -2)"],
+    mediumQ1Answer: 0,
+    
+    mediumQ2: "Find the x-intercepts of y = x² - 4",
+    mediumQ2Options: ["x = 0, 4", "x = 2, -2", "x = 4, -4", "No x-intercepts"],
+    mediumQ2Answer: 1,
+    
+    // Hard Questions
+    hardQ1: "What is the domain of y = √(x - 3)?",
+    hardQ1Options: ["x ≥ 3", "x ≤ 3", "All real numbers", "x ≠ 3"],
+    hardQ1Answer: 0,
+    
+    hardQ2: "If f(x) = x² and g(x) = 2x, what is (g∘f)(2)?",
+    hardQ2Options: ["8", "16", "4", "2"],
+    hardQ2Answer: 0,
+    
+    // Shape Game
+    shapeGameTitle: "🎨 Shape Guessing Game",
+    shapeGameDesc: "Identify the type of graph based on its visual representation. Quick and fun!",
+    shapeInstruction: "What type of graph is this?",
+    
+    // AI Tutor
+    aiTutorTitle: "🤖 AI Mathematics Tutor",
+    aiTutorDesc: "Ask any mathematics question and get personalized help. Or choose from suggested topics!",
+    welcomeMessage: "Hi! I'm your AI Math Tutor 🧮. Ask me anything about graphs, functions, equations, or any math topic! I'm here to help you understand concepts better.",
+    suggestedTopicsLabel: "📌 Popular Topics (Click to ask):",
+    sendText: "Send Question",
+    
+    // Results
     backText: "Back",
-    nextBtnText: "Next",
+    nextText: "Next Question",
     submitText: "Submit Answer",
-    backToMenuText: "Back to Menu",
+    
+    // Messages
+    correctAnswer: "✅ Correct! Great job!",
+    wrongAnswer: "❌ Wrong answer. Try again!",
+    pointsAdded: "points added!",
   },
   
   my: {
-    loginSubtitle: "Sistem Pembelajaran Matematik Interaktif Berasaskan AI",
+    subtitleLang: "Sistem Pembelajaran Graf Interaktif",
+    loginSubtitle: "Kuasai Matematik Melalui Pembelajaran Interaktif",
     studentNamePlaceholder: "Masukkan nama anda",
     loginBtnText: "Log Masuk",
     changeLangText: "Tukar Bahasa",
-    welcomeText: "Selamat kembali!",
+    welcomeText: "Selamat datang!",
+    scoreLabel: "Mata",
+    levelLabel: "Tahap",
     logoutBtnText: "Log Keluar",
-    diagnosticTitle: "Penilaian Diagnostik Pelajar",
-    diagnosticSubtitle: "Mari kita nilai tahap semasa anda",
-    diagnosticDesc: "Jawab beberapa soalan untuk membantu kami memahami kekuatan dan bidang penambahbaikan anda.",
-    menuTitle: "Pilih Laluan Pembelajaran Anda",
-    levelText: "Tahap",
-    pointsText: "Mata",
-    learningModesTitle: "📚 Mod Pembelajaran",
-    adaptiveText: "Pembelajaran Adaptif - Kesukaran AI",
-    geogebraText: "Ruang Kerja GeoGebra Interaktif",
-    escapeRoomText: "Cabaran Bilik Melepasi",
-    realLifeText: "Matematik Kehidupan Sebenar",
-    advancedFeaturesTitle: "🚀 Ciri Lanjutan",
-    collaborativeText: "Penyelesaian Masalah Kolaboratif",
-    arText: "Pemindai Matematik AR",
-    adaptiveTitle: "Mod Pembelajaran Adaptif",
-    adaptiveDesc: "Soalan yang dipersonalisasi berdasarkan hasil diagnostik anda. Kesukaran berubah seiring kemajuan anda!",
-    geogebraTitle: "Ruang Kerja GeoGebra Interaktif",
-    geogebraDesc: "Jelajahi konsep matematik melalui visualisasi dinamik. Manipulasi fungsi dan lihat perubahan masa nyata.",
-    geogebraPlaceholder: "Ruang kerja GeoGebra akan dimuat di sini. Jelajahi graf, fungsi, dan transformasi secara interaktif!",
-    escapeRoomTitle: "🔓 Cabaran Bilik Melepasi",
-    realLifeTitle: "🌍 Matematik Kehidupan Sebenar",
-    realLifeDesc: "Lihat bagaimana matematik digunakan dalam kerjaya dan senario dunia sebenar.",
-    selectCareerText: "Pilih kerjaya",
-    collaborativeTitle: "👥 Papan Kolaboratif",
-    collaborativeDesc: "Bekerja bersama rakan sekelas untuk menyelesaikan masalah matematik. Kongsi penaakulan dan selesaikan bersama!",
-    collaborativePlaceholder: "Ruang kerja kolaboratif - Bincang dan selesaikan masalah bersama secara masa nyata!",
-    arTitle: "📱 Pemindai Matematik AR",
-    arDesc: "Gunakan kamera peranti anda untuk mengimbas objek dunia sebenar dan temui matematik di dalamnya!",
-    arPlaceholder: "Tunjukkan kamera anda ke jambatan, bangunan, atau jalan untuk menemui matematik tersembunyi.",
+    menuTitle: "Pilih Aktiviti Pembelajaran Anda",
+    graphQuizText: "📊 Kuiz Graf (3 Tahap Kesukaran)",
+    shapeGameText: "🎨 Permainan Teka Bentuk",
+    aiTutorText: "🤖 Tutor Matematik AI",
+    
+    // Graph Quiz
+    graphQuizTitle: "Cabaran Kuiz Graf",
+    graphQuizDesc: "Uji pengetahuan anda tentang pelbagai jenis graf. Jawab soalan berdasarkan sifat, persamaan, dan ciri-ciri graf.",
+    difficultySelectText: "Pilih Tahap Kesukaran:",
+    
+    // Easy Questions
+    easyQ1: "Apakah pintasan-y bagi y = 2x + 3?",
+    easyQ1Options: ["1", "2", "3", "4"],
+    easyQ1Answer: 2,
+    
+    easyQ2: "Graf mana yang mewakili fungsi linear?",
+    easyQ2Options: ["Parabola", "Garis Lurus", "Bulatan", "Gelombang"],
+    easyQ2Answer: 1,
+    
+    // Medium Questions
+    mediumQ1: "Apakah puncak bagi y = (x - 2)² + 3?",
+    mediumQ1Options: ["(2, 3)", "(-2, 3)", "(3, 2)", "(-3, -2)"],
+    mediumQ1Answer: 0,
+    
+    mediumQ2: "Cari pintasan-x bagi y = x² - 4",
+    mediumQ2Options: ["x = 0, 4", "x = 2, -2", "x = 4, -4", "Tiada pintasan-x"],
+    mediumQ2Answer: 1,
+    
+    // Hard Questions
+    hardQ1: "Apakah domain bagi y = √(x - 3)?",
+    hardQ1Options: ["x ≥ 3", "x ≤ 3", "Semua nombor nyata", "x ≠ 3"],
+    hardQ1Answer: 0,
+    
+    hardQ2: "Jika f(x) = x² dan g(x) = 2x, apakah (g∘f)(2)?",
+    hardQ2Options: ["8", "16", "4", "2"],
+    hardQ2Answer: 0,
+    
+    // Shape Game
+    shapeGameTitle: "🎨 Permainan Teka Bentuk",
+    shapeGameDesc: "Kenal pasti jenis graf berdasarkan perwakilan visualnya. Cepat dan menyeronokkan!",
+    shapeInstruction: "Graf jenis apakah ini?",
+    
+    // AI Tutor
+    aiTutorTitle: "🤖 Tutor Matematik AI",
+    aiTutorDesc: "Tanya apa-apa soalan matematik dan dapatkan bantuan yang dipersonalisasi. Atau pilih dari topik yang dicadangkan!",
+    welcomeMessage: "Halo! Saya tutor matematik AI anda 🧮. Tanya saya apa-apa tentang graf, fungsi, persamaan, atau topik matematik lain! Saya di sini untuk membantu anda memahami konsep dengan lebih baik.",
+    suggestedTopicsLabel: "📌 Topik Populer (Klik untuk bertanya):",
+    sendText: "Hantar Soalan",
+    
+    // Results
     backText: "Kembali",
-    nextBtnText: "Seterusnya",
+    nextText: "Soalan Seterusnya",
     submitText: "Hantar Jawapan",
-    backToMenuText: "Kembali ke Menu",
+    
+    // Messages
+    correctAnswer: "✅ Betul! Kerja yang bagus!",
+    wrongAnswer: "❌ Jawapan salah. Cuba lagi!",
+    pointsAdded: "mata ditambah!",
   }
 };
 
@@ -90,12 +146,9 @@ let currentLanguage = null;
 let studentName = null;
 let score = 0;
 let level = 1;
-let diagnosticStep = 0;
-let studentProfile = {
-  confidence: {},
-  weakTopics: [],
-  strengths: []
-};
+let currentDifficulty = null;
+let currentShapeIndex = 0;
+let selectedAnswer = null;
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
@@ -127,59 +180,43 @@ function setLanguage(lang) {
 
 function updateUIText() {
   if (!currentLanguage) return;
-  
   const t = translations[currentLanguage];
   
-  const safeUpdate = (id, value, isHTML = false) => {
+  const safe = (id, value) => {
     const el = document.getElementById(id);
-    if (el) {
-      if (isHTML) el.innerHTML = value;
-      else el.textContent = value;
-    }
+    if (el) el.textContent = value;
   };
-  
-  // Update all UI text elements
-  safeUpdate('loginSubtitle', t.loginSubtitle);
+
+  safe('subtitleLang', t.subtitleLang);
+  safe('loginSubtitle', t.loginSubtitle);
   document.getElementById('studentName').placeholder = t.studentNamePlaceholder;
-  safeUpdate('loginBtnText', t.loginBtnText);
-  safeUpdate('changeLangText', t.changeLangText);
-  safeUpdate('diagnosticTitle', t.diagnosticTitle);
-  safeUpdate('diagnosticSubtitle', t.diagnosticSubtitle);
-  safeUpdate('diagnosticDesc', t.diagnosticDesc);
-  safeUpdate('welcomeText', t.welcomeText);
-  safeUpdate('logoutBtnText', t.logoutBtnText);
-  safeUpdate('menuTitle', t.menuTitle);
-  safeUpdate('levelText', t.levelText);
-  safeUpdate('pointsText', t.pointsText);
-  safeUpdate('learningModesTitle', t.learningModesTitle);
-  safeUpdate('adaptiveText', t.adaptiveText);
-  safeUpdate('geogebraText', t.geogebraText);
-  safeUpdate('escapeRoomText', t.escapeRoomText);
-  safeUpdate('realLifeText', t.realLifeText);
-  safeUpdate('advancedFeaturesTitle', t.advancedFeaturesTitle);
-  safeUpdate('collaborativeText', t.collaborativeText);
-  safeUpdate('arText', t.arText);
-  safeUpdate('adaptiveTitle', t.adaptiveTitle);
-  safeUpdate('adaptiveDesc', t.adaptiveDesc);
-  safeUpdate('geogebraTitle', t.geogebraTitle);
-  safeUpdate('geogebraDesc', t.geogebraDesc);
-  safeUpdate('geogebraPlaceholder', t.geogebraPlaceholder);
-  safeUpdate('escapeRoomTitle', t.escapeRoomTitle);
-  safeUpdate('realLifeTitle', t.realLifeTitle);
-  safeUpdate('realLifeDesc', t.realLifeDesc);
-  safeUpdate('selectCareerText', t.selectCareerText);
-  safeUpdate('careerSelectLabel', t.selectCareerText);
-  safeUpdate('collaborativeTitle', t.collaborativeTitle);
-  safeUpdate('collaborativeDesc', t.collaborativeDesc);
-  safeUpdate('collaborativePlaceholder', t.collaborativePlaceholder);
-  safeUpdate('arTitle', t.arTitle);
-  safeUpdate('arDesc', t.arDesc);
-  safeUpdate('arPlaceholder', t.arPlaceholder);
+  safe('loginBtnText', t.loginBtnText);
+  safe('changeLangText', t.changeLangText);
+  safe('welcomeText', t.welcomeText);
+  safe('scoreLabel', t.scoreLabel);
+  safe('levelLabel', t.levelLabel);
+  safe('logoutBtnText', t.logoutBtnText);
+  safe('menuTitle', t.menuTitle);
+  safe('graphQuizText', t.graphQuizText);
+  safe('shapeGameText', t.shapeGameText);
+  safe('aiTutorText', t.aiTutorText);
+  safe('graphQuizTitle', t.graphQuizTitle);
+  safe('graphQuizDesc', t.graphQuizDesc);
+  safe('difficultySelectText', t.difficultySelectText);
+  safe('shapeGameTitle', t.shapeGameTitle);
+  safe('shapeGameDesc', t.shapeGameDesc);
+  safe('shapeInstruction', t.shapeInstruction);
+  safe('aiTutorTitle', t.aiTutorTitle);
+  safe('aiTutorDesc', t.aiTutorDesc);
+  safe('welcomeMessage', t.welcomeMessage);
+  safe('suggestedTopicsLabel', t.suggestedTopicsLabel);
   
   document.querySelectorAll('#backText').forEach(el => el.textContent = t.backText);
-  document.querySelectorAll('#nextBtnText').forEach(el => el.textContent = t.nextBtnText);
+  document.querySelectorAll('#nextText').forEach(el => el.textContent = t.nextText);
   document.querySelectorAll('#submitText').forEach(el => el.textContent = t.submitText);
-  document.querySelectorAll('#backToMenuText').forEach(el => el.textContent = t.backToMenuText);
+  document.querySelectorAll('#sendText').forEach(el => el.textContent = t.sendText);
+  
+  document.getElementById('studentQuestion').placeholder = t.aiTutorDesc;
 }
 
 // Login System
@@ -191,12 +228,10 @@ function login() {
   }
   
   studentName = name;
-  diagnosticStep = 0;
+  saveProgress();
   document.getElementById('studentNameDisplay').textContent = name;
-  document.getElementById('studentNameMenuDisplay').textContent = name;
   updateScore();
-  startDiagnostic();
-  goToPage('diagnostic');
+  goToPage('mainMenu');
 }
 
 function logout() {
@@ -218,296 +253,347 @@ function logout() {
 function goToPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   const pageEl = document.getElementById(page);
-  if (pageEl) {
-    pageEl.classList.add('active');
+  if (pageEl) pageEl.classList.add('active');
+  
+  if (page === 'graphQuiz') {
+    loadDifficultyButtons();
+  } else if (page === 'shapeGame') {
+    setTimeout(() => drawRandomShape(), 100);
+  } else if (page === 'aiTutor') {
+    initAITutor();
   }
 }
 
-// DIAGNOSTIC SYSTEM
-function startDiagnostic() {
-  diagnosticStep = 0;
-  loadDiagnosticQuestion();
-}
-
-function loadDiagnosticQuestion() {
-  const diagnosticQuestions = [
-    {
-      en: "How confident are you with linear equations (y = mx + b)?",
-      my: "Berapa yakin anda dengan persamaan linear (y = mx + b)?"
-    },
-    {
-      en: "How confident are you with quadratic functions?",
-      my: "Berapa yakin anda dengan fungsi kuadratik?"
-    },
-    {
-      en: "How confident are you with functions and transformations?",
-      my: "Berapa yakin anda dengan fungsi dan transformasi?"
-    }
+// ===== GRAPH QUIZ SYSTEM =====
+function loadDifficultyButtons() {
+  const difficulties = [
+    { level: 'easy', label: 'MUDAH', emoji: '⭐' },
+    { level: 'medium', label: 'SEDERHANA', emoji: '⭐⭐' },
+    { level: 'hard', label: 'SUKAR', emoji: '⭐⭐⭐' }
   ];
 
-  const topics = ['linear', 'quadratic', 'functions'];
+  let html = '';
+  difficulties.forEach(d => {
+    const lang = currentLanguage === 'en' ? d.label : ['Mudah', 'Sederhana', 'Sukar'][difficulties.indexOf(d)];
+    html += `<button class="difficulty-btn ${d.level}" onclick="setQuizDifficulty('${d.level}')">${d.emoji} ${lang}</button>`;
+  });
   
-  if (diagnosticStep < diagnosticQuestions.length) {
-    const q = diagnosticQuestions[diagnosticStep];
-    const topic = topics[diagnosticStep];
-    
-    const contentDiv = document.getElementById('diagnosticContent');
-    contentDiv.innerHTML = `
-      <div class="diagnostic-question">
-        <p>${q[currentLanguage]}</p>
-        <div class="confidence-scale">
-          <button class="confidence-btn" onclick="setConfidence('${topic}', 1)">❌ Not at all</button>
-          <button class="confidence-btn" onclick="setConfidence('${topic}', 2)">🤔 Somewhat</button>
-          <button class="confidence-btn" onclick="setConfidence('${topic}', 3)">✓ Confident</button>
-          <button class="confidence-btn" onclick="setConfidence('${topic}', 4)">🚀 Very Confident</button>
-        </div>
-      </div>
-    `;
-  } else {
-    goToPage('mainMenu');
-  }
+  document.getElementById('difficultyButtons').innerHTML = html;
 }
 
-function setConfidence(topic, level) {
-  studentProfile.confidence[topic] = level;
-  
-  // Identify weak areas
-  if (level <= 2) {
-    if (!studentProfile.weakTopics.includes(topic)) {
-      studentProfile.weakTopics.push(topic);
-    }
-  } else {
-    if (!studentProfile.strengths.includes(topic)) {
-      studentProfile.strengths.push(topic);
-    }
-  }
-  
-  diagnosticStep++;
-  
-  // Show visual feedback
-  document.querySelectorAll('.confidence-btn').forEach(btn => btn.classList.remove('selected'));
+function setQuizDifficulty(difficulty) {
+  currentDifficulty = difficulty;
+  document.querySelectorAll('.difficulty-btn').forEach(b => b.classList.remove('selected'));
   event.target.classList.add('selected');
   
-  setTimeout(() => {
-    loadDiagnosticQuestion();
-  }, 500);
+  loadQuizQuestion();
 }
 
-function continueDiagnostic() {
-  if (diagnosticStep < 3) {
-    alert(currentLanguage === 'en' 
-      ? 'Please answer all questions first' 
-      : 'Sila jawab semua soalan terlebih dahulu');
+function loadQuizQuestion() {
+  const t = translations[currentLanguage];
+  const contentDiv = document.getElementById('quizContent');
+  const submitBtn = document.getElementById('submitQuizBtn');
+  
+  let question, options, answer;
+  
+  if (currentDifficulty === 'easy') {
+    const rand = Math.random() > 0.5 ? 0 : 1;
+    question = rand === 0 ? t.easyQ1 : t.easyQ2;
+    options = rand === 0 ? t.easyQ1Options : t.easyQ2Options;
+    answer = rand === 0 ? t.easyQ1Answer : t.easyQ2Answer;
+  } else if (currentDifficulty === 'medium') {
+    const rand = Math.random() > 0.5 ? 0 : 1;
+    question = rand === 0 ? t.mediumQ1 : t.mediumQ2;
+    options = rand === 0 ? t.mediumQ1Options : t.mediumQ2Options;
+    answer = rand === 0 ? t.mediumQ1Answer : t.mediumQ2Answer;
   } else {
-    goToPage('mainMenu');
+    const rand = Math.random() > 0.5 ? 0 : 1;
+    question = rand === 0 ? t.hardQ1 : t.hardQ2;
+    options = rand === 0 ? t.hardQ1Options : t.hardQ2Options;
+    answer = rand === 0 ? t.hardQ1Answer : t.hardQ2Answer;
   }
-}
-
-// ADAPTIVE LEARNING SYSTEM
-function loadAdaptiveLearning() {
-  const difficultyDiv = document.getElementById('difficultySelector');
   
-  const difficulties = [
-    { level: 'basic', en: 'Basic', my: 'Asas' },
-    { level: 'medium', en: 'Medium', my: 'Sederhana' },
-    { level: 'advanced', en: 'Advanced (HOTS)', my: 'Lanjutan (KBAT)' }
-  ];
-
-  let html = '<h3 style="margin-bottom: 15px; color: #667eea;">Choose Difficulty Level</h3><div class="difficulty-grid">';
+  sessionStorage.setItem('currentAnswer', answer);
   
-  difficulties.forEach(diff => {
-    html += `
-      <div class="difficulty-card" onclick="setDifficulty('${diff.level}')">
-        <h4>${diff[currentLanguage]}</h4>
-        <p>${diff.level === 'basic' ? '📖' : diff.level === 'medium' ? '📚' : '🏆'}</p>
-      </div>
-    `;
+  let html = `<div class="question-box"><p><strong>${question}</strong></p></div>`;
+  html += '<div style="margin: 20px 0;">';
+  
+  options.forEach((opt, idx) => {
+    html += `<button style="width: 100%; padding: 12px; margin: 8px 0; text-align: left; background: white; color: #667eea; border: 2px solid #ddd;" onclick="selectAnswer(${idx}, this)">${opt}</button>`;
   });
   
   html += '</div>';
-  difficultyDiv.innerHTML = html;
+  contentDiv.innerHTML = html;
+  submitBtn.style.display = 'block';
+  selectedAnswer = null;
 }
 
-function setDifficulty(level) {
-  const contentDiv = document.getElementById('adaptiveContent');
-  
-  const questions = {
-    basic: {
-      en: 'What is the y-intercept of y = 2x + 3?',
-      my: 'Apakah pintasan-y bagi y = 2x + 3?',
-      answer: '3'
-    },
-    medium: {
-      en: 'Solve: 2x² - 8x + 6 = 0',
-      my: 'Selesaikan: 2x² - 8x + 6 = 0',
-      answer: '1,3'
-    },
-    advanced: {
-      en: 'If f(x) = x² + 2 and g(x) = 3x - 1, find f(g(2))',
-      my: 'Jika f(x) = x² + 2 dan g(x) = 3x - 1, cari f(g(2))',
-      answer: '27'
-    }
-  };
-
-  const q = questions[level];
-  
-  contentDiv.innerHTML = `
-    <div class="question-box">
-      <p><strong>${q[currentLanguage]}</strong></p>
-    </div>
-    <input type="text" id="adaptiveAnswer" placeholder="${currentLanguage === 'en' ? 'Your answer' : 'Jawapan anda'}">
-  `;
+function selectAnswer(idx, btn) {
+  document.querySelectorAll('[onclick*="selectAnswer"]').forEach(b => b.style.borderColor = '#ddd');
+  btn.style.borderColor = '#667eea';
+  btn.style.backgroundColor = '#f0f7ff';
+  selectedAnswer = idx;
 }
 
-function submitAdaptiveAnswer() {
-  const answer = document.getElementById('adaptiveAnswer').value.trim();
-  
-  if (!answer) {
-    alert(currentLanguage === 'en' ? 'Please enter an answer' : 'Sila masukkan jawapan');
+function submitQuizAnswer() {
+  if (selectedAnswer === null) {
+    alert(currentLanguage === 'en' ? 'Please select an answer' : 'Sila pilih jawapan');
     return;
   }
   
-  score += 10;
+  const correct = parseInt(sessionStorage.getItem('currentAnswer'));
+  const t = translations[currentLanguage];
+  const contentDiv = document.getElementById('quizContent');
+  
+  if (selectedAnswer === correct) {
+    const points = currentDifficulty === 'easy' ? 5 : currentDifficulty === 'medium' ? 10 : 15;
+    score += points;
+    contentDiv.innerHTML = `<div class="result correct">${t.correctAnswer}<br><strong>+${points} ${t.pointsAdded}</strong></div>`;
+  } else {
+    contentDiv.innerHTML = `<div class="result wrong">${t.wrongAnswer}</div>`;
+  }
+  
   updateScore();
-  
-  alert(currentLanguage === 'en' 
-    ? 'Great! +10 points' 
-    : 'Bagus! +10 mata');
+  setTimeout(() => loadQuizQuestion(), 2000);
 }
 
-// REAL-LIFE MATHEMATICS SYSTEM
-function loadRealLifeScenario() {
-  const career = document.getElementById('careerSelect').value;
-  const scenarioDiv = document.getElementById('realLifeScenario');
-  
-  if (!career) {
-    scenarioDiv.innerHTML = '';
-    return;
-  }
+// ===== SHAPE GUESSING GAME =====
+const shapeTypes = [
+  { name: 'linear', draw: drawLinear },
+  { name: 'parabola', draw: drawParabola },
+  { name: 'cubic', draw: drawCubic },
+  { name: 'exponential', draw: drawExponential },
+  { name: 'sine', draw: drawSine }
+];
 
-  const scenarios = {
-    engineer: {
-      en: {
-        title: 'Bridge Design Challenge',
-        desc: 'Design an arch bridge using a parabola equation. The bridge must span 100m with a maximum height of 25m.',
-        task: 'Calculate the equation of the parabola and verify the heights at specific points.'
-      },
-      my: {
-        title: 'Cabaran Reka Jambatan',
-        desc: 'Reka bentuk jambatan melengkung menggunakan persamaan parabola. Jambatan mesti menjangkau 100m dengan ketinggian maksimum 25m.',
-        task: 'Kira persamaan parabola dan sahkan ketinggian pada titik tertentu.'
-      }
+function drawLinear(ctx, w, h) {
+  ctx.strokeStyle = '#667eea';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(20, h - 20);
+  ctx.lineTo(w - 20, 20);
+  ctx.stroke();
+}
+
+function drawParabola(ctx, w, h) {
+  ctx.strokeStyle = '#667eea';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  for (let x = 20; x < w - 20; x++) {
+    const y = Math.pow((x - w/2) / 50, 2) + 50;
+    if (x === 20) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+}
+
+function drawCubic(ctx, w, h) {
+  ctx.strokeStyle = '#667eea';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  for (let x = 20; x < w - 20; x++) {
+    const y = Math.pow((x - w/2) / 80, 3) * 100 + h/2;
+    if (x === 20) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+}
+
+function drawExponential(ctx, w, h) {
+  ctx.strokeStyle = '#667eea';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  for (let x = 20; x < w - 20; x++) {
+    const y = h - Math.pow(1.05, (x - 20) / 5);
+    if (x === 20) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+}
+
+function drawSine(ctx, w, h) {
+  ctx.strokeStyle = '#667eea';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  for (let x = 20; x < w - 20; x++) {
+    const y = Math.sin((x - 20) / 30) * 80 + h/2;
+    if (x === 20) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+}
+
+function drawRandomShape() {
+  currentShapeIndex = Math.floor(Math.random() * 5);
+  const canvas = document.getElementById('shapeCanvas');
+  const ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  shapeTypes[currentShapeIndex].draw(ctx, canvas.width, canvas.height);
+  
+  loadShapeOptions();
+  document.getElementById('shapeResult').innerHTML = '';
+  document.getElementById('nextShapeBtn').style.display = 'none';
+}
+
+function loadShapeOptions() {
+  const shapes = ['Linear', 'Parabola', 'Cubic', 'Exponential', 'Sine Wave'];
+  let html = '';
+  
+  shapes.forEach((shape, idx) => {
+    html += `<button class="shape-option" onclick="selectShape(${idx})">${shape}</button>`;
+  });
+  
+  document.getElementById('shapeOptions').innerHTML = html;
+}
+
+function selectShape(idx) {
+  const t = translations[currentLanguage];
+  const resultDiv = document.getElementById('shapeResult');
+  
+  if (idx === currentShapeIndex) {
+    score += 8;
+    resultDiv.innerHTML = `<div class="result correct">${t.correctAnswer} +8 ${t.pointsAdded}</div>`;
+  } else {
+    resultDiv.innerHTML = `<div class="result wrong">${t.wrongAnswer}</div>`;
+  }
+  
+  updateScore();
+  document.getElementById('nextShapeBtn').style.display = 'block';
+}
+
+function nextShapeGame() {
+  drawRandomShape();
+}
+
+// ===== AI TUTOR SYSTEM =====
+function initAITutor() {
+  document.getElementById('chatContainer').innerHTML = '<div class="message tutor">' + translations[currentLanguage].welcomeMessage + '</div>';
+  loadSuggestedTopics();
+}
+
+function loadSuggestedTopics() {
+  const topics = currentLanguage === 'en' 
+    ? ['What is a linear graph?', 'How to find the vertex of a parabola?', 'What does gradient mean?', 'How to identify graph transformations?', 'What is a function domain?']
+    : ['Apakah itu graf linear?', 'Bagaimana mencari puncak parabola?', 'Apakah maksud kecerunan?', 'Bagaimana mengenal pasti transformasi graf?', 'Apakah domain fungsi?'];
+  
+  let html = '';
+  topics.forEach(topic => {
+    html += `<button onclick="askSuggestedQuestion('${topic}')">${topic}</button>`;
+  });
+  
+  document.getElementById('suggestedTopics').innerHTML = html;
+}
+
+function sendQuestion() {
+  const question = document.getElementById('studentQuestion').value.trim();
+  if (!question) return;
+  
+  const container = document.getElementById('chatContainer');
+  
+  const studentMsg = document.createElement('div');
+  studentMsg.className = 'message student';
+  studentMsg.textContent = question;
+  container.appendChild(studentMsg);
+  
+  const typingDiv = document.createElement('div');
+  typingDiv.className = 'message tutor';
+  typingDiv.textContent = currentLanguage === 'en' ? '⏳ Thinking...' : '⏳ Sedang berfikir...';
+  container.appendChild(typingDiv);
+  
+  container.scrollTop = container.scrollHeight;
+  
+  setTimeout(() => {
+    typingDiv.remove();
+    const response = generateAIResponse(question);
+    
+    const aiMsg = document.createElement('div');
+    aiMsg.className = 'message tutor';
+    aiMsg.textContent = response;
+    container.appendChild(aiMsg);
+    
+    container.scrollTop = container.scrollHeight;
+    score += 2;
+    updateScore();
+  }, 1500);
+  
+  document.getElementById('studentQuestion').value = '';
+}
+
+function askSuggestedQuestion(question) {
+  document.getElementById('studentQuestion').value = question;
+  sendQuestion();
+}
+
+function generateAIResponse(question) {
+  const q = question.toLowerCase();
+  
+  const responses = {
+    en: {
+      linear: "A linear graph is a straight line! It represents a linear function like y = mx + b. The 'm' is the slope (steepness), and 'b' is where it crosses the y-axis.",
+      parabola: "A parabola is a U-shaped or inverted U-shaped curve. It comes from quadratic functions like y = ax² + bx + c. The vertex is the highest or lowest point!",
+      gradient: "Gradient (or slope) measures how steep a line is. It's calculated as rise/run = (y₂-y₁)/(x₂-x₁). A steep line has a large gradient!",
+      vertex: "The vertex of a parabola y = ax² + bx + c is at x = -b/2a. Then substitute this x-value back into the equation to find the y-coordinate!",
+      transformation: "Graph transformations include: shifts (up/down/left/right), stretches/compressions, and reflections. Each changes the original function in specific ways!",
+      default: "Great question! 🧠 Let me explain: Mathematics is all about relationships and patterns. Understanding graphs helps you visualize these patterns and solve real-world problems!"
     },
-    architect: {
-      en: {
-        title: 'Building Layout Design',
-        desc: 'Design a building layout using geometric shapes. Calculate the area and perimeter for optimal space usage.',
-        task: 'Create a floor plan that maximizes usable area while minimizing costs.'
-      },
-      my: {
-        title: 'Reka Bentuk Susun Atur Bangunan',
-        desc: 'Reka bentuk susun atur bangunan menggunakan bentuk geometri. Kira luas dan perimeter untuk penggunaan ruang yang optimal.',
-        task: 'Cipta pelan lantai yang memaksimalkan kawasan yang boleh digunakan sambil meminimalkan kos.'
-      }
-    },
-    analyst: {
-      en: {
-        title: 'Data Analysis Project',
-        desc: 'Analyze sales data using linear regression. Predict future trends and create visualizations.',
-        task: 'Find the trend line equation and forecast sales for the next quarter.'
-      },
-      my: {
-        title: 'Projek Analisis Data',
-        desc: 'Analisis data jualan menggunakan regresi linear. Ramalkan trend masa depan dan cipta visualisasi.',
-        task: 'Cari persamaan garis trend dan ramalkan jualan untuk suku berikutnya.'
-      }
+    my: {
+      linear: "Graf linear ialah garis lurus! Ia mewakili fungsi linear seperti y = mx + b. 'm' ialah cerun (kecuraman), dan 'b' ialah tempat ia memotong paksi-y.",
+      parabola: "Parabola ialah lengkung berbentuk U atau U terbalik. Ia berasal dari fungsi kuadratik seperti y = ax² + bx + c. Puncak ialah titik tertinggi atau terendah!",
+      gradient: "Kecerunan mengukur seberapa curam garis itu. Ia dikira sebagai naik/lari = (y₂-y₁)/(x₂-x₁). Garis yang curam mempunyai kecerunan yang besar!",
+      vertex: "Puncak parabola y = ax² + bx + c berada di x = -b/2a. Kemudian gantikan nilai x ini kembali ke dalam persamaan untuk mencari koordinat-y!",
+      transformation: "Transformasi graf termasuk: anjakan (atas/bawah/kiri/kanan), regangan/mampatan, dan pantulan. Setiap satu mengubah fungsi asal dengan cara tertentu!",
+      default: "Soalan yang bagus! 🧠 Mari saya jelaskan: Matematik adalah tentang hubungan dan corak. Memahami graf membantu anda memvisualisasikan corak ini dan menyelesaikan masalah dunia sebenar!"
     }
   };
-
-  const scenario = scenarios[career];
-  if (!scenario) return;
-
+  
   const lang = currentLanguage === 'en' ? 'en' : 'my';
+  const responseSet = responses[lang];
   
-  scenarioDiv.innerHTML = `
-    <div class="real-life-scenario">
-      <h4>${scenario[lang].title}</h4>
-      <p><strong>${scenario[lang].desc}</strong></p>
-      <p style="margin-top: 15px;">📋 <strong>${scenario[lang].task}</strong></p>
-    </div>
-    <textarea id="realLifeAnswer" placeholder="${currentLanguage === 'en' ? 'Your solution' : 'Penyelesaian anda'}"></textarea>
-  `;
+  if (q.includes('linear') || q.includes('garis lurus')) return responseSet.linear;
+  if (q.includes('parabola') || q.includes('kuadratik')) return responseSet.parabola;
+  if (q.includes('gradient') || q.includes('cerun')) return responseSet.gradient;
+  if (q.includes('vertex') || q.includes('puncak')) return responseSet.vertex;
+  if (q.includes('transform')) return responseSet.transformation;
+  return responseSet.default;
 }
 
-function submitRealLifeAnswer() {
-  const answer = document.getElementById('realLifeAnswer').value.trim();
-  
-  if (!answer) {
-    alert(currentLanguage === 'en' ? 'Please provide a solution' : 'Sila berikan penyelesaian');
-    return;
-  }
-  
-  score += 15;
-  updateScore();
-  
-  alert(currentLanguage === 'en' 
-    ? 'Excellent work! +15 points' 
-    : 'Kerja yang cemerlang! +15 mata');
-}
-
-function submitEscapeRoomAnswer() {
-  score += 20;
-  updateScore();
-  
-  alert(currentLanguage === 'en' 
-    ? 'You escaped! +20 points' 
-    : 'Anda terlepas! +20 mata');
-}
-
-// Scoring System
+// Progress System
 function updateScore() {
-  const scoreDisplay = document.getElementById('totalPoints');
-  if (scoreDisplay) scoreDisplay.textContent = score;
+  document.getElementById('totalScore').textContent = score;
   
-  // Calculate level
   if (score >= 100) level = 5;
   else if (score >= 70) level = 4;
   else if (score >= 40) level = 3;
   else if (score >= 20) level = 2;
   else level = 1;
   
-  const levelDisplay = document.getElementById('currentLevel');
-  if (levelDisplay) levelDisplay.textContent = level;
+  document.getElementById('currentLevel').textContent = level;
+  
+  const progress = (score % 50) / 50 * 100;
+  document.getElementById('progressFill').style.width = progress + '%';
   
   saveProgress();
 }
 
-// Progress Saving
 function saveProgress() {
-  const progress = {
+  localStorage.setItem('smartmath_progress', JSON.stringify({
     studentName: studentName,
     score: score,
     level: level,
-    studentProfile: studentProfile,
     timestamp: new Date().toISOString()
-  };
-  localStorage.setItem('smartmath_progress', JSON.stringify(progress));
+  }));
 }
 
 function loadProgress() {
   const saved = localStorage.getItem('smartmath_progress');
   if (saved) {
     try {
-      const progress = JSON.parse(saved);
-      studentName = progress.studentName;
-      score = progress.score || 0;
-      level = progress.level || 1;
-      studentProfile = progress.studentProfile || { confidence: {}, weakTopics: [], strengths: [] };
-      
-      if (studentName) {
-        document.getElementById('studentNameMenuDisplay').textContent = studentName;
-        updateScore();
-      }
+      const data = JSON.parse(saved);
+      studentName = data.studentName;
+      score = data.score || 0;
+      level = data.level || 1;
+      updateScore();
     } catch (e) {
       console.error('Error loading progress:', e);
     }
